@@ -77,6 +77,33 @@ footer {
     padding: 1rem 0;
 }
 
+/* Map section styles */
+.map-container {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.new-england-map {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.map-marker {
+    position: absolute;
+    background: #003366cc;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
 @media (max-width: 800px) {
     .attractions-grid {
         flex-direction: column;
