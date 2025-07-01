@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f9fa;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -93,6 +95,13 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+/* Container and width constraints */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* Map section styles */
