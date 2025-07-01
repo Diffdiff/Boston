@@ -207,6 +207,62 @@ footer {
     border-bottom: 2px solid #e3eafc;
 }
 
+/* Journey section styling */
+.journey-location {
+    margin-bottom: 4rem;
+    border: 1px solid #e3eafc;
+    border-radius: 12px;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.attractions-section, .itinerary-section {
+    margin-bottom: 2rem;
+}
+
+.attractions-section h4, .itinerary-section h4 {
+    color: #003366;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #e3eafc;
+    padding-bottom: 0.5rem;
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.itinerary-day {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #003366;
+}
+
+.day-header {
+    margin-bottom: 1rem;
+}
+
+.day-date {
+    font-weight: bold;
+    color: #003366;
+    font-size: 1.1rem;
+}
+
+.itinerary-day ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.itinerary-day li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
 @media (max-width: 800px) {
     .attractions-grid {
         flex-direction: column;
