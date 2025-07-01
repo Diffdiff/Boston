@@ -72,6 +72,29 @@ nav a {
     margin-bottom: 0.5rem;
 }
 
+.card-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.card-link {
+    background: #003366;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.card-link:hover {
+    background: #004080;
+    text-decoration: none;
+}
+
 section {
     margin-bottom: 3rem;
     padding: 0 1rem;
