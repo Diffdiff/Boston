@@ -71,7 +71,21 @@ nav a {
 }
 
 section {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+section h2 {
+    text-align: center;
+    color: #003366;
+    font-size: 2rem;
     margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+#attractions {
+    background: #f8f9fa;
+    padding: 3rem 1rem;
 }
 
 footer {
