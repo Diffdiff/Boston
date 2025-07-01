@@ -33,16 +33,14 @@ nav a {
 }
 
 .hero .hero-img {
-    width: 80% !important;
-    max-width: 800px !important;
-    min-width: 500px !important;
+    width: 600px !important;
+    max-width: none !important;
     height: auto !important;
     margin-top: 1rem;
     border-radius: 8px;
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    border: 3px solid red; /* Temporary debugging border */
 }
 
 .attractions-grid {
