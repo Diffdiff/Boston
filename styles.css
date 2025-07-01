@@ -41,7 +41,8 @@ nav a {
 } */
 
 .hero-img {
-    max-width: 250px;
+    width: 250px;
+    max-width: 100%;
     height: auto;
     margin-top: 1rem;
     border-radius: 8px;
