@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.hero {
+    background: #e3eafc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    max-width: 200px;
+    height: auto;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.attractions-grid {
+    text-align: center;
+}
+
+.card-links {
+    margin-top: 10px;
+}
+
+.card-link {
+    background: #003366;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    display: inline-block;
+}
