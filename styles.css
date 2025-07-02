@@ -263,6 +263,42 @@ footer {
     line-height: 1.4;
 }
 
+/* Weather section styling */
+#weather {
+    background: #f8f9fa;
+    padding: 3rem 1rem;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.weather-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 2rem;
+    text-align: center;
+    border-left: 4px solid #003366;
+}
+
+.weather-card h3 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.weather-card p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 800px) {
     .attractions-grid {
         flex-direction: column;
