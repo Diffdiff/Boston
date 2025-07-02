@@ -20,6 +20,17 @@
     <section class="hero">
         <h2>Welcome to Your New England Adventure!</h2>
         <p>Discover the best of New England with our curated road trip guide.</p>
+        
+        <!-- Countdown Timer -->
+        <div class="countdown-container">
+            <div class="countdown-text">Trip begins in:</div>
+            <div id="countdown" class="countdown-timer">
+                <span id="days">--</span> days
+                <span id="hours">--</span> hours
+                <span id="minutes">--</span> minutes
+            </div>
+        </div>
+        
         <img src="images/NE.webp" alt="Map of New England" class="hero-img" />
     </section>
 
@@ -28,8 +39,21 @@
         <div class="container">
             <h2>Your New England Journey</h2>
             
+            <!-- Quick Navigation -->
+            <div class="journey-nav">
+                <div class="nav-title">Jump to:</div>
+                <div class="nav-links">
+                    <a href="#boston" class="nav-link">Boston</a>
+                    <a href="#salem" class="nav-link">Salem</a>
+                    <a href="#coast-maine" class="nav-link">Coast of Maine</a>
+                    <a href="#portland" class="nav-link">Portland</a>
+                    <a href="#white-mountains" class="nav-link">White Mountains</a>
+                    <a href="#vermont-boston" class="nav-link">Return Trip</a>
+                </div>
+            </div>
+            
             <!-- Boston Days 1-2 -->
-            <div class="journey-location">
+            <div id="boston" class="journey-location">
                 <h3 class="location-title">Boston (Oct 11-12)</h3>
                 
                 <!-- Attractions -->
@@ -105,9 +129,9 @@
             </div>
 
             <!-- Salem Day 3 -->
-            <div class="journey-location">
+            <div id="salem" class="journey-location">
                 <h3 class="location-title">Salem (Oct 13)</h3>
-                
+
                 <!-- Attractions -->
                 <div class="attractions-section">
                     <h4>Top Attractions</h4>
@@ -154,7 +178,7 @@
 
 
             <!-- Coast of Maine Day 4 -->
-            <div class="journey-location">
+            <div id="coast-maine" class="journey-location">
                 <h3 class="location-title">Coast of Maine (Oct 14)</h3>
                 
                 <!-- Attractions -->
@@ -225,7 +249,7 @@
             </div>
 
             <!-- Portland Day 5 -->
-            <div class="journey-location">
+            <div id="portland" class="journey-location">
                 <h3 class="location-title">Portland (Oct 15)</h3>
                 
                 <!-- Attractions -->
@@ -273,7 +297,7 @@
             </div>
 
             <!-- White Mountains & Vermont Days 6-7 -->
-            <div class="journey-location">
+            <div id="white-mountains" class="journey-location">
                 <h3 class="location-title">White Mountains, NH & Vermont (Oct 16-17)</h3>
                 
                 <!-- Attractions -->
@@ -331,7 +355,7 @@
             </div>
 
             <!-- Vermont to Boston Day 8 -->
-            <div class="journey-location">
+            <div id="vermont-boston" class="journey-location">
                 <h3 class="location-title">Vermont ➡️ Connecticut ➡️ Rhode Island ➡️ Boston (Oct 18)</h3>
                 
                 <!-- Attractions -->
@@ -427,5 +451,45 @@
     <footer id="contact">
         <p>Contact: your@email.com | Follow us on <a href="#">Instagram</a></p>
     </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const tripDate = new Date('October 11, 2025 10:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = tripDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+            } else {
+                document.getElementById('countdown').innerHTML = "🎉 Trip has begun! 🎉";
+            }
+        }
+
+        // Update countdown every minute
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

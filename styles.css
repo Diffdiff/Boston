@@ -367,6 +367,73 @@ footer {
 .line-5 { top: 47%; left: 73%; width: 8%; transform: rotate(25deg); }
 .line-6 { top: 42%; left: 67%; width: 15%; transform: rotate(45deg); }
 
+/* Countdown Timer */
+.countdown-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.countdown-text {
+    font-size: 1.1rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.countdown-timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    font-family: 'Courier New', monospace;
+}
+
+.countdown-timer span {
+    margin: 0 0.5rem;
+}
+
+/* Journey Navigation */
+.journey-nav {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+.nav-title {
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    background: #003366;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #e74c3c;
+    transform: translateY(-1px);
+}
+
 @media (max-width: 800px) {
     .attractions-grid {
         flex-direction: column;
