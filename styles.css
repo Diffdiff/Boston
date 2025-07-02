@@ -299,6 +299,74 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+/* Interactive Journey Map */
+.journey-map {
+    background: #f8f9fa;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.map-container {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.route-marker {
+    position: absolute;
+    background: #003366;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.route-marker.current {
+    background: #e74c3c;
+    animation: pulse 2s infinite;
+}
+
+.route-line {
+    position: absolute;
+    background: #003366;
+    height: 3px;
+    z-index: 5;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Map markers positioning */
+.marker-boston { top: 65%; left: 85%; }
+.marker-salem { top: 60%; left: 87%; }
+.marker-portsmouth { top: 55%; left: 82%; }
+.marker-york { top: 50%; left: 80%; }
+.marker-cape-elizabeth { top: 48%; left: 78%; }
+.marker-portland { top: 47%; left: 77%; }
+.marker-kennebunkport { top: 52%; left: 79%; }
+.marker-conway { top: 45%; left: 70%; }
+.marker-vermont { top: 40%; left: 65%; }
+
+/* Route lines */
+.line-1 { top: 62%; left: 85%; width: 3%; transform: rotate(15deg); }
+.line-2 { top: 57%; left: 84%; width: 4%; transform: rotate(-10deg); }
+.line-3 { top: 52%; left: 80%; width: 3%; transform: rotate(-15deg); }
+.line-4 { top: 49%; left: 78%; width: 2%; transform: rotate(-20deg); }
+.line-5 { top: 47%; left: 73%; width: 8%; transform: rotate(25deg); }
+.line-6 { top: 42%; left: 67%; width: 15%; transform: rotate(45deg); }
+
 @media (max-width: 800px) {
     .attractions-grid {
         flex-direction: column;
