@@ -464,6 +464,109 @@
                 font-size: 0.75rem;
             }
         }
+
+        /* Enhanced Footer Styling */
+        footer {
+            background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-orange) 100%);
+            color: white;
+            padding: 2rem 0 1rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-info {
+            flex: 1;
+        }
+
+        .footer-info a {
+            color: var(--fall-cream);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-info a:hover {
+            color: var(--fall-yellow);
+        }
+
+        .qr-section {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .qr-section h4 {
+            color: var(--fall-cream);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .qr-section p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: var(--fall-cream);
+            opacity: 0.9;
+        }
+
+        .qr-container {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            display: block;
+        }
+
+        .site-url {
+            font-family: monospace;
+            font-size: 0.8rem !important;
+            color: var(--fall-cream) !important;
+            word-break: break-all;
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive footer */
+        @media (max-width: 768px) {
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .qr-code {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .site-url {
+                font-size: 0.7rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1261,9 +1364,6 @@
                         <li>Beanie/hat for warmth</li>
                         <li>Lightweight gloves (great for cold mornings or summits)</li>
                         <li>Sunglasses (even fall sun hits hard above tree line)</li>
-                        <li>Small daypack</li>
-                        <li>Water bottle or CamelBak</li>
-                        <li>Reusable shopping tote (many towns are bag-free)</li>
                     </ul>
                 </div>
 
@@ -1304,32 +1404,62 @@
         </div>
     </section>
 
-  
-
     <!-- Interactive Map Section -->
     <section id="map">
         <div class="container">
             <h2>🗺️ Your Route Map</h2>
-            <p>Visualize your New England road trip route and key stops.</p>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d768515.3981833811!2d-71.4410!3d43.2081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x89e3652d0d3d311b%3A0x787cbf240162e8a0!2sBoston%2C%20MA!3m2!1d42.3600825!2d-71.0588801!4m5!1s0x89e30f6b152c335d%3A0x8625948b6bb89b26!2sSalem%2C%20MA!3m2!1d42.5194854!2d-70.8967155!4m5!1s0x4cb29c72aab0ee2d%3A0x7e9979cc58421d10!2sAcadia%20National%20Park%2C%20ME!3m2!1d44.35!2d-68.21!4m5!1s0x4cb3c1f9b7f3e6e1%3A0x7bc30b7e8b8b8b8b!2sWhite%20Mountain%20National%20Forest%2C%20NH!3m2!1d44.2619!2d-71.3000!4m5!1s0x89e3652d0d3d311b%3A0x787cbf240162e8a0!2sBoston%2C%20MA!3m2!1d42.3600825!2d-71.0588801!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <p>Visualize your New England road trip route and key stops.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact & Connect</h2>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Contact: your@email.com | Follow us on <a href="#">Instagram</a></p>
+                </div>
+                <div class="qr-section">
+                    <!-- QR Code Section -->
+                    <img src="data:image/png;base64,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" alt="QR Code for New England Adventure Website" class="qr-code">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>Contact: your@email.com | Follow us on <a href="#">Instagram</a></p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>Contact: your@email.com | Follow us on <a href="#">Instagram</a></p>
+            </div>
+            <div class="qr-section">
+                <!-- QR Code Section -->
+                <img src="data:image/png;base64,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" alt="QR Code for New England Adventure Website" class="qr-code">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 New England Adventure. Safe travels! 🍂</p>
+            <p class="site-url">https://diffdiff.github.io/Boston/</p>
+        </div>
     </footer>
 
     <script>
         // Countdown Timer
+        const tripDate = new Date('October 11, 2025 10:00:00').getTime();
+        const now = new Date().getTime();
+        const timeLeft = tripDate - now;
+
         function updateCountdown() {
-            const tripDate = new Date('October 11, 2025 10:00:00').getTime();
             const now = new Date().getTime();
             const timeLeft = tripDate - now;
 
-            if (timeLeft > 0) {
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = "🎉 Trip has begun! 🎉";
+            } else {
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -1337,16 +1467,11 @@
                 document.getElementById('days').textContent = days;
                 document.getElementById('hours').textContent = hours;
                 document.getElementById('minutes').textContent = minutes;
-            } else {
-                document.getElementById('countdown').innerHTML = "🎉 Trip has begun! 🎉";
             }
         }
 
-        // Update countdown every minute
-        updateCountdown();
         setInterval(updateCountdown, 60000);
-
-        // Smooth scrolling for anchor links
+        updateCountdown();        // Smooth scrolling for anchor links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
