@@ -163,6 +163,66 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
+        /* Fall-themed header */
+        header {
+            background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-orange) 50%, var(--fall-red) 100%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            border-bottom: 3px solid var(--fall-yellow);
+        }
+
+        header h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header nav a {
+            color: var(--fall-cream);
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: var(--fall-yellow);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        /* Fall hero styling */
+        .hero {
+            background: linear-gradient(135deg, 
+                rgba(124, 45, 18, 0.9) 0%, 
+                rgba(220, 38, 38, 0.8) 25%, 
+                rgba(251, 191, 36, 0.8) 50%, 
+                rgba(254, 243, 199, 0.9) 100%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero h2::before {
+            content: "🍂 ";
+        }
+
+        .hero h2::after {
+            content: " 🍁";
+        }
+
+        .hero p {
+            color: var(--fall-cream);
+            font-weight: 500;
+        }
+
+        /* Fall-themed countdown */
+        .countdown-container {
+            background: rgba(254, 243, 199, 0.2);
+            border: 2px solid var(--fall-orange);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .countdown-timer {
+            color: var(--fall-cream);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
         /* Multiple falling leaves animation */
         @keyframes fallLeaf {
             0% { 
@@ -366,7 +426,7 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>Boston Adventure</h1>
+        <h1>New England Adventure</h1>
         <nav>
             <a href="#journey">Your Journey</a>
             <a href="#weather">Weather</a>
@@ -652,7 +712,7 @@
                             </div>
                             <ul>
                                 <li>Leisurely morning departure from Salem</li>
-                                <li>Stop in Epping, NH (~45 min) - visit Sig Sauer factory</li>
+                                <li>Stop in Epping
                                 <li>Continue to Portsmouth, NH (~30 min) - explore historic downtown</li>
                                 <li>Continue to York, Maine (~30 min) - visit York Beach or Nubble Lighthouse</li>
                                 <li>Continue to Kennebunkport (~30 min) - stroll Dock Square</li>
