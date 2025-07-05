@@ -471,51 +471,51 @@
             color: white;
             padding: 2rem 0 1rem 0;
             margin-top: 3rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: var(--fall-cream);
+            margin-bottom: 2rem;
             text-align: center;
         }
 
         .footer-content {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            justify-content: space-around;
+            align-items: flex-start;
             flex-wrap: wrap;
             gap: 3rem;
+            margin-bottom: 2rem;
         }
 
         .footer-info {
             flex: 1;
             min-width: 250px;
-        }
-
-        .footer-info a {
-            color: var(--fall-cream);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-info a:hover {
-            color: var(--fall-yellow);
+            text-align: center;
         }
 
         .qr-section {
             flex: 1;
-            max-width: 300px;
+            min-width: 250px;
             text-align: center;
         }
 
         .qr-section h4 {
             color: var(--fall-cream);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
         .qr-section p {
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
             color: var(--fall-cream);
+            margin-bottom: 1rem;
             opacity: 0.9;
         }
 
@@ -525,52 +525,45 @@
             border-radius: 12px;
             display: inline-block;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin: 0 auto 1rem auto;
+            margin: 1rem auto;
         }
 
         .qr-code {
             width: 150px;
             height: 150px;
             display: block;
-            margin: 0 auto;
         }
 
         .site-url {
             font-family: monospace;
-            font-size: 0.8rem !important;
-            color: var(--fall-cream) !important;
-            word-break: break-all;
+            font-size: 0.8rem;
+            color: var(--fall-cream);
             background: rgba(0,0,0,0.2);
             padding: 0.5rem;
             border-radius: 6px;
-            margin-top: 0.5rem;
-            text-align: center;
+            margin: 1rem auto;
+            max-width: 300px;
+            word-break: break-all;
         }
 
         .footer-bottom {
-            margin-top: 2rem;
-            padding-top: 1rem;
+            text-align: center;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.9rem;
             opacity: 0.8;
-            text-align: center;
         }
 
         /* Responsive footer */
         @media (max-width: 768px) {
             .footer-content {
                 flex-direction: column;
-                text-align: center;
                 gap: 2rem;
             }
             
             .qr-code {
                 width: 120px;
                 height: 120px;
-            }
-            
-            .site-url {
-                font-size: 0.7rem !important;
             }
         }
     </style>
@@ -1421,8 +1414,10 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+
+
+    <!-- Footer -->
+    <footer id="contact">
         <div class="container">
             <h2>Contact & Connect</h2>
             <div class="footer-content">
@@ -1444,26 +1439,6 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 New England Adventure. Safe travels! 🍂</p>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>Contact: drewdiffie@gmail.com</p>
-            </div>
-            <div class="qr-section">
-                <h4>🔗 Share This Site</h4>
-                <p>Scan to view on mobile or share with friends!</p>
-                <div class="qr-container">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://diffdiff.github.io/Boston/" alt="QR Code for New England Adventure Website" class="qr-code">
-                </div>
-                <p class="site-url">https://diffdiff.github.io/Boston/</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 New England Adventure. Safe travels! 🍂</p>
         </div>
     </footer>
 
