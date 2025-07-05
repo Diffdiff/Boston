@@ -245,6 +245,48 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
+        /* Personal photo styling */
+        .hero-photo {
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .couple-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--fall-cream);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .couple-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-caption {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: var(--fall-cream);
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-style: italic;
+        }
+
+        /* Responsive photo */
+        @media (max-width: 768px) {
+            .couple-photo {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .photo-caption {
+                font-size: 1rem;
+            }
+        }
+
         /* Multiple falling leaves animation */
         @keyframes fallLeaf {
             0% { 
@@ -601,6 +643,12 @@
     <section class="hero">
         <h2>Welcome to Drew and Julia's Fall New England Adventure!</h2>
         <p>Discover the best of New England with our curated road trip guide.</p>
+        
+        <!-- Personal Photo -->
+        <div class="hero-photo">
+            <img src="images/drewjulia.jpg" alt="Drew and Julia" class="couple-photo">
+            <p class="photo-caption">Ready for our amazing New England adventure! 🍂</p>
+        </div>
         
         <!-- Countdown Timer -->
         <div class="countdown-container">
