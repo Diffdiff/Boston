@@ -249,15 +249,15 @@
         .hero-photo {
             margin: 2rem auto;
             text-align: center;
-            max-width: 400px;
+            max-width: 600px; /* Increased from 400px */
         }
 
         .couple-photo {
-            width: 300px;
-            height: 300px;
+            width: 450px; /* Increased from 300px */
+            height: 450px; /* Increased from 300px */
             border-radius: 50%;
             object-fit: cover;
-            object-position: center top; /* This will help position the crop better */
+            object-position: center top;
             border: 5px solid var(--fall-cream);
             box-shadow: 0 8px 25px rgba(0,0,0,0.3);
             transition: transform 0.3s ease;
@@ -279,8 +279,8 @@
         /* Responsive photo */
         @media (max-width: 768px) {
             .couple-photo {
-                width: 250px;
-                height: 250px;
+                width: 350px; /* Increased from 250px */
+                height: 350px; /* Increased from 250px */
             }
             
             .photo-caption {
