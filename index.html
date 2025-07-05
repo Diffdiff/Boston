@@ -5,11 +5,31 @@
     <title>Boston Trip</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Fall Theme Enhancements */
+        :root {
+            --fall-orange: #FF6B35;
+            --fall-red: #DC2626;
+            --fall-yellow: #F59E0B;
+            --fall-brown: #92400E;
+            --fall-cream: #FEF3C7;
+            --fall-burgundy: #7C2D12;
+        }
+
+        /* Add fall gradient background */
+        body {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FED7AA 50%, #FECACA 100%);
+            min-height: 100vh;
+        }
+
         /* Restaurant Section */
         .restaurant-section {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 2px solid #e74c3c;
+            border-top: 3px solid var(--fall-orange);
+            background: linear-gradient(45deg, rgba(254, 243, 199, 0.8), rgba(254, 215, 170, 0.6));
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
         }
 
         .restaurant-grid {
@@ -20,18 +40,39 @@
         }
 
         .restaurant-card {
-            background: #fff8f0;
+            background: linear-gradient(135deg, #FEF3C7 0%, #FBBF24 100%);
             padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #e74c3c;
+            border-radius: 12px;
+            border-left: 5px solid var(--fall-orange);
+            border-right: 2px solid var(--fall-red);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .restaurant-card::before {
+            content: "🍂";
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3);
         }
 
         .restaurant-card h5 {
-            color: #e74c3c;
+            color: var(--fall-burgundy);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
-            border-bottom: 1px solid #e74c3c;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--fall-orange);
             padding-bottom: 0.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .restaurant-card ul {
@@ -40,30 +81,131 @@
         }
 
         .restaurant-card li {
-            padding: 0.4rem 0;
-            color: #555;
+            padding: 0.5rem 0;
+            color: var(--fall-brown);
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+            font-weight: 500;
         }
 
         .restaurant-card li:before {
-            content: "🍴";
+            content: "🍁";
             position: absolute;
             left: 0;
+            top: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .restaurant-card a {
-            color: #e74c3c;
+            color: var(--fall-burgundy);
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         .restaurant-card a:hover {
+            color: var(--fall-orange);
             text-decoration: underline;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
+        /* Fall-themed section headers */
+        .restaurant-section h4 {
+            color: var(--fall-burgundy);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .restaurant-section h4::before {
+            content: "🍂 ";
+        }
+
+        .restaurant-section h4::after {
+            content: " 🍂";
+        }
+
+        /* Add fall colors to location titles */
+        .location-title {
+            background: linear-gradient(45deg, var(--fall-orange), var(--fall-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+        }
+
+        /* Fall-themed navigation */
+        .journey-nav {
+            background: linear-gradient(135deg, var(--fall-cream), var(--fall-yellow));
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--fall-orange);
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.2);
+        }
+
+        .nav-link {
+            background: var(--fall-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-link:hover {
+            background: var(--fall-red);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Add autumn leaf decorations */
+        @keyframes fallLeaf {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        .journey-location::before {
+            content: "🍂";
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            font-size: 2rem;
+            animation: fallLeaf 10s infinite linear;
+            z-index: 1;
+        }
+
+        /* Fall hero styling */
+        .hero {
+            background: linear-gradient(135deg, 
+                rgba(254, 243, 199, 0.9) 0%, 
+                rgba(251, 191, 36, 0.8) 25%, 
+                rgba(239, 68, 68, 0.8) 50%, 
+                rgba(124, 45, 18, 0.9) 100%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero h2::before {
+            content: "🍂 ";
+        }
+
+        .hero h2::after {
+            content: " 🍁";
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .restaurant-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .restaurant-card {
+                margin-bottom: 1rem;
             }
         }
     </style>
