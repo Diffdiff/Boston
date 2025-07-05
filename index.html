@@ -163,49 +163,202 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* Add autumn leaf decorations */
+        /* Multiple falling leaves animation */
         @keyframes fallLeaf {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-        }
-
-        .journey-location::before {
-            content: "🍂";
-            position: absolute;
-            top: -20px;
-            right: 20px;
-            font-size: 2rem;
-            animation: fallLeaf 10s infinite linear;
-            z-index: 1;
-        }
-
-        /* Fall hero styling */
-        .hero {
-            background: linear-gradient(135deg, 
-                rgba(254, 243, 199, 0.9) 0%, 
-                rgba(251, 191, 36, 0.8) 25%, 
-                rgba(239, 68, 68, 0.8) 50%, 
-                rgba(124, 45, 18, 0.9) 100%);
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero h2::before {
-            content: "🍂 ";
-        }
-
-        .hero h2::after {
-            content: " 🍁";
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .restaurant-grid {
-                grid-template-columns: 1fr;
+            0% { 
+                transform: translateY(-100px) rotate(0deg) translateX(0px); 
+                opacity: 1; 
             }
-            
-            .restaurant-card {
-                margin-bottom: 1rem;
+            25% { 
+                transform: translateY(25vh) rotate(90deg) translateX(50px); 
+                opacity: 0.8; 
+            }
+            50% { 
+                transform: translateY(50vh) rotate(180deg) translateX(-30px); 
+                opacity: 0.6; 
+            }
+            75% { 
+                transform: translateY(75vh) rotate(270deg) translateX(40px); 
+                opacity: 0.4; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg) translateX(-20px); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes fallLeaf2 {
+            0% { 
+                transform: translateY(-100px) rotate(45deg) translateX(0px); 
+                opacity: 1; 
+            }
+            30% { 
+                transform: translateY(30vh) rotate(135deg) translateX(-40px); 
+                opacity: 0.9; 
+            }
+            60% { 
+                transform: translateY(60vh) rotate(225deg) translateX(60px); 
+                opacity: 0.5; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(405deg) translateX(-10px); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes fallLeaf3 {
+            0% { 
+                transform: translateY(-100px) rotate(90deg) translateX(0px); 
+                opacity: 1; 
+            }
+            40% { 
+                transform: translateY(40vh) rotate(180deg) translateX(-20px); 
+                opacity: 0.7; 
+            }
+            80% { 
+                transform: translateY(80vh) rotate(270deg) translateX(30px); 
+                opacity: 0.3; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(450deg) translateX(0px); 
+                opacity: 0; 
+            }
+        }
+
+        /* Create multiple falling leaves */
+        body::before,
+        body::after,
+        .hero::before,
+        .hero::after,
+        section::before,
+        section::after {
+            content: "🍂";
+            position: fixed;
+            top: -50px;
+            font-size: 1.5rem;
+            pointer-events: none;
+            z-index: 1000;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* Different starting positions and animations */
+        body::before {
+            left: 10%;
+            animation: fallLeaf 8s infinite;
+            animation-delay: 0s;
+        }
+
+        body::after {
+            left: 20%;
+            animation: fallLeaf2 10s infinite;
+            animation-delay: 2s;
+            content: "🍁";
+        }
+
+        .hero::before {
+            left: 30%;
+            animation: fallLeaf3 12s infinite;
+            animation-delay: 4s;
+            content: "🍂";
+        }
+
+        .hero::after {
+            left: 40%;
+            animation: fallLeaf 9s infinite;
+            animation-delay: 1s;
+            content: "🍁";
+        }
+
+        section::before {
+            left: 60%;
+            animation: fallLeaf2 11s infinite;
+            animation-delay: 3s;
+            content: "🍂";
+        }
+
+        section::after {
+            left: 80%;
+            animation: fallLeaf3 7s infinite;
+            animation-delay: 5s;
+            content: "🍁";
+        }
+
+        /* Additional leaves with different emojis */
+        .container::before,
+        .container::after {
+            content: "🍃";
+            position: fixed;
+            top: -50px;
+            font-size: 1.2rem;
+            pointer-events: none;
+            z-index: 999;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .container::before {
+            left: 50%;
+            animation: fallLeaf 13s infinite;
+            animation-delay: 6s;
+        }
+
+        .container::after {
+            left: 70%;
+            animation: fallLeaf2 8s infinite;
+            animation-delay: 7s;
+        }
+
+        /* Remove the old single leaf animation */
+        .journey-location::before {
+            display: none;
+        }
+
+        /* Add some maple leaves too */
+        @keyframes floatDown {
+            0% { 
+                transform: translateY(-100px) rotate(0deg) translateX(0px); 
+                opacity: 1; 
+            }
+            50% { 
+                transform: translateY(50vh) rotate(180deg) translateX(100px); 
+                opacity: 0.6; 
+            }
+            100% { 
+                transform: translateY(100vh) rotate(360deg) translateX(-50px); 
+                opacity: 0; 
+            }
+        }
+
+        /* Add extra maple leaves */
+        .restaurant-section::before,
+        .restaurant-section::after {
+            content: "🍁";
+            position: fixed;
+            top: -50px;
+            font-size: 1.8rem;
+            pointer-events: none;
+            z-index: 998;
+            animation: floatDown 15s infinite ease-in-out;
+        }
+
+        .restaurant-section::before {
+            left: 15%;
+            animation-delay: 8s;
+        }
+
+        .restaurant-section::after {
+            left: 85%;
+            animation-delay: 10s;
+        }
+
+        /* Responsive: fewer leaves on mobile */
+        @media (max-width: 768px) {
+            section::before,
+            section::after,
+            .container::before,
+            .container::after {
+                display: none;
             }
         }
     </style>
