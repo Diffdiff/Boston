@@ -1497,8 +1497,8 @@
 
     <script>
         // Countdown Timer
-
         function updateCountdown() {
+            const tripDate = new Date('October 11, 2025 10:00:00').getTime(); // Add this line!
             const now = new Date().getTime();
             const timeLeft = tripDate - now;
 
@@ -1515,8 +1515,11 @@
             }
         }
 
+        // Update countdown every minute
+        updateCountdown();
         setInterval(updateCountdown, 60000);
-        updateCountdown();        // Smooth scrolling for anchor links
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
