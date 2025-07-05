@@ -791,3 +791,58 @@
     </script>
 </body>
 </html>
+
+<style>
+/* Restaurant Section */
+.restaurant-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e74c3c;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.restaurant-card {
+    background: #fff8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+.restaurant-card h5 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e74c3c;
+    padding-bottom: 0.5rem;
+}
+
+.restaurant-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.restaurant-card li {
+    padding: 0.4rem 0;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.restaurant-card li:before {
+    content: "🍴";
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
