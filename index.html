@@ -614,6 +614,112 @@
             opacity: 0.8;
         }
 
+        /* Enhanced attraction cards with larger images */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FBBF24 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid var(--fall-orange);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px; /* Increased from default */
+            object-fit: cover;
+            border-bottom: 3px solid var(--fall-orange);
+        }
+
+        .card h3 {
+            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            color: var(--fall-burgundy);
+            font-size: 1.3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .card p {
+            padding: 0 1.5rem 1rem 1.5rem;
+            color: var(--fall-brown);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .card-links {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .card-link {
+            background: var(--fall-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .card-link:hover {
+            background: var(--fall-red);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile responsive improvements */
+        @media (max-width: 768px) {
+            .attractions-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .card img {
+                height: 200px; /* Still larger than before on mobile */
+            }
+            
+            .card h3 {
+                font-size: 1.2rem;
+                padding: 1rem 1rem 0.5rem 1rem;
+            }
+            
+            .card p {
+                padding: 0 1rem 0.5rem 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .card-links {
+                padding: 0 1rem 1rem 1rem;
+                flex-direction: column;
+            }
+            
+            .card-link {
+                text-align: center;
+                padding: 0.75rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card img {
+                height: 180px; /* Even on smallest screens, still bigger than original */
+            }
+        }
+
         /* Responsive footer */
         @media (max-width: 768px) {
             .qr-code {
