@@ -288,7 +288,7 @@
             }
         }
 
-        /* Multiple falling leaves animation */
+        /* Multiple falling leaves animation - 50% larger */
         @keyframes fallLeaf {
             0% { 
                 transform: translateY(-100px) rotate(0deg) translateX(0px); 
@@ -350,7 +350,7 @@
             }
         }
 
-        /* Create multiple falling leaves */
+        /* Create multiple falling leaves - 50% LARGER */
         body::before,
         body::after,
         .hero::before,
@@ -360,7 +360,7 @@
             content: "🍂";
             position: fixed;
             top: -50px;
-            font-size: 1.5rem;
+            font-size: 2.25rem; /* Increased from 1.5rem */
             pointer-events: none;
             z-index: 1000;
             animation-iteration-count: infinite;
@@ -409,13 +409,13 @@
             content: "🍁";
         }
 
-        /* Additional leaves with different emojis */
+        /* Additional leaves with different emojis - 50% LARGER */
         .container::before,
         .container::after {
             content: "🍃";
             position: fixed;
             top: -50px;
-            font-size: 1.2rem;
+            font-size: 1.8rem; /* Increased from 1.2rem */
             pointer-events: none;
             z-index: 999;
             animation-iteration-count: infinite;
@@ -434,12 +434,7 @@
             animation-delay: 7s;
         }
 
-        /* Remove the old single leaf animation */
-        .journey-location::before {
-            display: none;
-        }
-
-        /* Add some maple leaves too */
+        /* Add some maple leaves too - 50% LARGER */
         @keyframes floatDown {
             0% { 
                 transform: translateY(-100px) rotate(0deg) translateX(0px); 
@@ -455,13 +450,13 @@
             }
         }
 
-        /* Add extra maple leaves */
+        /* Add extra maple leaves - 50% LARGER */
         .restaurant-section::before,
         .restaurant-section::after {
             content: "🍁";
             position: fixed;
             top: -50px;
-            font-size: 1.8rem;
+            font-size: 2.7rem; /* Increased from 1.8rem */
             pointer-events: none;
             z-index: 998;
             animation: floatDown 15s infinite ease-in-out;
