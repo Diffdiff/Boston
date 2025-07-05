@@ -146,21 +146,43 @@
             box-shadow: 0 6px 20px rgba(255, 107, 53, 0.2);
         }
 
+        /* Enhanced navigation with dates */
         .nav-link {
             background: var(--fall-orange);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-width: 120px;
+        }
+
+        .nav-location {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-date {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            font-weight: normal;
+            color: var(--fall-cream);
         }
 
         .nav-link:hover {
             background: var(--fall-red);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .nav-link:hover .nav-date {
+            color: white;
         }
 
         /* Fall-themed header */
@@ -421,6 +443,27 @@
                 display: none;
             }
         }
+
+        /* Responsive navigation */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .nav-link {
+                min-width: 100px;
+                padding: 0.5rem 0.75rem;
+            }
+            
+            .nav-location {
+                font-size: 0.9rem;
+            }
+            
+            .nav-date {
+                font-size: 0.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -463,13 +506,34 @@
             <div class="journey-nav">
                 <div class="nav-title">Jump to:</div>
                 <div class="nav-links">
-                    <a href="#boston" class="nav-link">Boston</a>
-                    <a href="#salem" class="nav-link">Salem</a>
-                    <a href="#coast-maine" class="nav-link">Coast of Maine</a>
-                    <a href="#acadia" class="nav-link">Acadia</a>
-                    <a href="#white-mountains" class="nav-link">White Mountains</a>
-                    <a href="#mount-washington" class="nav-link">Mount Washington</a>
-                    <a href="#vermont-boston" class="nav-link">Return Trip</a>
+                    <a href="#boston" class="nav-link">
+                        <div class="nav-location">Boston</div>
+                        <div class="nav-date">Oct 11-12</div>
+                    </a>
+                    <a href="#salem" class="nav-link">
+                        <div class="nav-location">Salem</div>
+                        <div class="nav-date">Oct 13</div>
+                    </a>
+                    <a href="#coast-maine" class="nav-link">
+                        <div class="nav-location">Coast of Maine</div>
+                        <div class="nav-date">Oct 14</div>
+                    </a>
+                    <a href="#acadia" class="nav-link">
+                        <div class="nav-location">Acadia</div>
+                        <div class="nav-date">Oct 15</div>
+                    </a>
+                    <a href="#white-mountains" class="nav-link">
+                        <div class="nav-location">White Mountains</div>
+                        <div class="nav-date">Oct 16</div>
+                    </a>
+                    <a href="#mount-washington" class="nav-link">
+                        <div class="nav-location">Mount Washington</div>
+                        <div class="nav-date">Oct 17</div>
+                    </a>
+                    <a href="#vermont-boston" class="nav-link">
+                        <div class="nav-location">Return Trip</div>
+                        <div class="nav-date">Oct 18</div>
+                    </a>
                 </div>
             </div>
             
