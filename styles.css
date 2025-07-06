@@ -1,15 +1,28 @@
+/* Fall Theme Variables */
+:root {
+    --fall-orange: #FF6B35;
+    --fall-red: #DC2626;
+    --fall-yellow: #F59E0B;
+    --fall-brown: #92400E;
+    --fall-cream: #FEF3C7;
+    --fall-burgundy: #7C2D12;
+}
+
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FED7AA 50%, #FECACA 100%);
+    min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
 }
 
+/* Header */
 header {
-    background: #003366;
-    color: #fff;
+    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-orange) 50%, var(--fall-red) 100%);
+    color: white;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -17,19 +30,47 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 3px solid var(--fall-yellow);
 }
 
-nav a {
-    color: #fff;
+header h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header nav a {
+    color: var(--fall-cream);
     margin-left: 1.5rem;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+header nav a:hover {
+    color: var(--fall-yellow);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Hero Section */
 .hero {
-    background: #e3eafc;
+    background: linear-gradient(135deg, 
+        rgba(124, 45, 18, 0.9) 0%, 
+        rgba(220, 38, 38, 0.8) 25%, 
+        rgba(251, 191, 36, 0.8) 50%, 
+        rgba(254, 243, 199, 0.9) 100%);
+    color: white;
     text-align: center;
     padding: 2rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero h2::before { content: "🍂 "; }
+.hero h2::after { content: " 🍁"; }
+
+.hero p {
+    color: var(--fall-cream);
+    font-weight: 500;
 }
 
 .hero .hero-img {
@@ -43,81 +84,67 @@ nav a {
     margin-right: auto !important;
 }
 
-.attractions-grid {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 1rem;
-}
-
-.card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 1rem;
-    width: 250px;
+/* Personal Photo */
+.hero-photo {
+    margin: 2rem auto;
     text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s; /* Add transition */
+    max-width: 600px;
 }
 
-.card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+.couple-photo {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 5px solid var(--fall-cream);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 0.5rem;
+.couple-photo:hover {
+    transform: scale(1.05);
 }
 
-.card-links {
-    display: flex;
-    gap: 0.5rem;
+.photo-caption {
     margin-top: 1rem;
-    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--fall-cream);
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-style: italic;
 }
 
-.card-link {
-    background: #003366;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: background-color 0.2s;
-}
-
-.card-link:hover {
-    background: #004080;
-    text-decoration: none;
-}
-
-section {
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-}
-
-section h2 {
+/* Countdown Timer */
+.countdown-container {
+    background: rgba(254, 243, 199, 0.2);
+    border: 2px solid var(--fall-orange);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 400px;
     text-align: center;
-    color: #003366;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.countdown-text {
+    font-size: 1.1rem;
+    color: var(--fall-cream);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.countdown-timer {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: var(--fall-cream);
+    font-family: 'Courier New', monospace;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-#attractions {
-    background: #f8f9fa;
-    padding: 3rem 1rem;
-}
-
-footer {
-    background: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.countdown-timer span {
+    margin: 0 0.5rem;
 }
 
 /* Container and width constraints */
@@ -367,43 +394,14 @@ footer {
 .line-5 { top: 47%; left: 73%; width: 8%; transform: rotate(25deg); }
 .line-6 { top: 42%; left: 67%; width: 15%; transform: rotate(45deg); }
 
-/* Countdown Timer */
-.countdown-container {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin: 2rem auto;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.countdown-text {
-    font-size: 1.1rem;
-    color: #003366;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.countdown-timer {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #e74c3c;
-    font-family: 'Courier New', monospace;
-}
-
-.countdown-timer span {
-    margin: 0 0.5rem;
-}
-
 /* Journey Navigation */
 .journey-nav {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 2rem 0;
-    text-align: center;
-    border: 1px solid #e9ecef;
+    background: linear-gradient(135deg, var(--fall-cream), var(--fall-yellow));
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.2);
 }
 
 .nav-title {
@@ -420,120 +418,378 @@ footer {
 }
 
 .nav-link {
-    background: #003366;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.nav-location {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.nav-date {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    font-weight: normal;
+    color: var(--fall-cream);
 }
 
 .nav-link:hover {
-    background: #e74c3c;
-    transform: translateY(-1px);
+    background: var(--fall-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Photo Challenge Section */
-#photo-challenge {
-    background-color: #f8f9fa;
-    padding: 3rem 0;
+.nav-link:hover .nav-date {
+    color: white;
 }
 
-.challenge-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+/* Restaurant Section */
+.restaurant-section {
     margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 3px solid var(--fall-orange);
+    background: linear-gradient(45deg, rgba(254, 243, 199, 0.8), rgba(254, 215, 170, 0.6));
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
 }
 
-.challenge-item {
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.restaurant-card {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FBBF24 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--fall-orange);
+    border-right: 2px solid var(--fall-red);
+    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.restaurant-card::before {
+    content: "🍂";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3);
+}
+
+.restaurant-card h5 {
+    color: var(--fall-burgundy);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--fall-orange);
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.restaurant-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.restaurant-card li {
+    padding: 0.5rem 0;
+    color: var(--fall-brown);
+    position: relative;
+    padding-left: 2rem;
+    font-weight: 500;
+}
+
+.restaurant-card li:before {
+    content: "🍁";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.restaurant-card a {
+    color: var(--fall-burgundy);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.restaurant-card a:hover {
+    color: var(--fall-orange);
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Fall-themed section headers */
+.restaurant-section h4 {
+    color: var(--fall-burgundy);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.restaurant-section h4::before {
+    content: "🍂 ";
+}
+
+.restaurant-section h4::after {
+    content: " 🍂";
+}
+
+/* Add fall colors to location titles */
+.location-title {
+    background: linear-gradient(45deg, var(--fall-orange), var(--fall-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+}
+
+/* Enhanced Footer Styling */
+footer {
+    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-orange) 100%);
+    color: white;
+    padding: 2rem 0 1rem 0;
+    margin-top: 3rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+footer h2 {
+    color: var(--fall-cream);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.qr-section {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-section h4 {
+    color: var(--fall-cream);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.qr-section p {
+    color: var(--fall-cream);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.qr-container {
     background: white;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 12px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 0 auto 1rem auto;
+    width: fit-content;
 }
 
-.challenge-item:hover {
-    transform: translateY(-2px);
+.qr-code {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
 }
 
-.challenge-checkbox {
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    color: #e74c3c;
+.site-url {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--fall-cream);
+    background: rgba(0,0,0,0.2);
+    padding: 0.5rem;
+    border-radius: 6px;
+    margin: 1rem auto;
+    max-width: 300px;
+    word-break: break-all;
+    text-align: center;
+    display: block;
 }
 
-.challenge-text {
+.footer-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer-info p {
     font-size: 1rem;
-    color: #333;
+    color: var(--fall-cream);
 }
 
-/* Packing List Section */
-#packing {
-    padding: 3rem 0;
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
-.packing-grid {
+/* Enhanced attraction cards with larger images */
+.attractions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.packing-category {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #003366;
+.card {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FBBF24 100%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--fall-orange);
 }
 
-.packing-category h3 {
-    color: #003366;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-.packing-category ul {
-    list-style: none;
-    padding: 0;
+.card img {
+    width: 100%;
+    height: 250px; /* Increased from default */
+    object-fit: cover;
+    border-bottom: 3px solid var(--fall-orange);
 }
 
-.packing-category li {
-    padding: 0.3rem 0;
-    color: #555;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.packing-category li:before {
-    content: "✓";
-    color: #e74c3c;
+.card h3 {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    color: var(--fall-burgundy);
+    font-size: 1.3rem;
+    margin: 0;
     font-weight: bold;
-    position: absolute;
-    left: 0;
 }
 
-@media (max-width: 800px) {
-    .attractions-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        width: 90%;
-        margin-bottom: 1rem;
-    }
+.card p {
+    padding: 0 1.5rem 1rem 1.5rem;
+    color: var(--fall-brown);
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
 }
 
+.card-links {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card-link {
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.card-link:hover {
+    background: var(--fall-red);
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive improvements */
 @media (max-width: 768px) {
-    .challenge-grid {
+    .attractions-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .packing-grid {
-        grid-template-columns: 1fr;
+    .card img {
+        height: 200px; /* Still larger than before on mobile */
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+    
+    .card p {
+        padding: 0 1rem 0.5rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .card-links {
+        padding: 0 1rem 1rem 1rem;
+        flex-direction: column;
+    }
+    
+    .card-link {
+        text-align: center;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card img {
+        height: 180px; /* Even on smallest screens, still bigger than original */
+    }
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .qr-code {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .site-url {
+        font-size: 0.7rem;
     }
 }
