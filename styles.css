@@ -869,3 +869,212 @@ footer h2 {
         font-size: 0.7rem;
     }
 }
+
+/* Boston Metro Link */
+.metro-link-section {
+    background: rgba(254, 243, 199, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.metro-link-section h4 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.metro-nav-link {
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.metro-nav-link:hover {
+    background: var(--fall-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Boston Metro Guide - Bottom of page */
+#boston-metro {
+    background: rgba(254, 243, 199, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.metro-section h4 {
+    color: #003366;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.metro-section h4::before {
+    content: "🚇";
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    font-size: 2.5rem;
+    transform: translateY(-10%);
+}
+
+.metro-section h4::after {
+    content: " Metro Guide";
+    position: absolute;
+    right: -1.5rem;
+    top: 0;
+    font-size: 2.5rem;
+    transform: translateY(-10%);
+}
+
+.metro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.metro-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.metro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.metro-card h5 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.metro-card p {
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.metro-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.metro-card li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.metro-card li:before {
+    content: "🚉";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    transform: translateY(2px);
+}
+
+.metro-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metro-link {
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.metro-link:hover {
+    background: var(--fall-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.metro-tips {
+    margin-top: 2rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.metro-tips h5 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.metro-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.metro-tips li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.metro-tips li:before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.1rem;
+    transform: translateY(2px);
+}
+
+.metro-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.metro-link {
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.metro-link:hover {
+    background: var(--fall-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
