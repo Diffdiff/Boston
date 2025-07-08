@@ -744,14 +744,15 @@ footer h2 {
     transform: translateY(-1px);
 }
 
-/* Fix accommodation photo size - make them same size as attraction cards */
+/* Accommodation photo - same size as attraction cards */
 .accommodation-photo {
-    width: 250px;        /* Same as attraction card images */
-    height: 160px;       /* Same as attraction card images */
+    width: 250px !important;        /* Force same size as attraction cards */
+    height: 160px !important;       /* Force same size as attraction cards */
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid var(--fall-orange);
     flex-shrink: 0;
+    margin-right: 1.5rem;
 }
 
 /* Mobile responsive */
@@ -854,15 +855,6 @@ footer h2 {
 
 .accommodation-card:hover {
     transform: translateY(-3px);
-}
-
-.accommodation-photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid var(--fall-orange);
-    margin-right: 1.5rem;
 }
 
 .accommodation-info {
