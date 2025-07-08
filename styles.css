@@ -783,15 +783,15 @@ footer h2 {
 .accommodation-info h5 {
     color: var(--fall-burgundy);
     margin: 0 0 0.5rem 0;
-    font-size: 1.3rem;              /* Increased from 1.1rem */
-    font-weight: bold;
+    font-size: 1.3rem !important;   /* Force larger hotel name */
+    font-weight: bold !important;
 }
 
 .accommodation-info p {
     color: var(--fall-brown);
     margin: 0 0 1rem 0;
-    font-size: 1.1rem;              /* Increased from 0.95rem */
-    line-height: 1.4;
+    font-size: 1.1rem !important;   /* Force larger description */
+    line-height: 1.4 !important;
 }
 
 /* Mobile responsive */
@@ -809,15 +809,15 @@ footer h2 {
     }
     
     .accommodation-section h4 {
-        font-size: 1.4rem;              /* Slightly smaller for mobile */
+        font-size: 1.4rem !important;   /* Slightly smaller for mobile */
     }
     
     .accommodation-info h5 {
-        font-size: 1.2rem;              /* Slightly smaller for mobile */
+        font-size: 1.2rem !important;   /* Slightly smaller for mobile */
     }
     
     .accommodation-info p {
-        font-size: 1rem;                /* Slightly smaller for mobile */
+        font-size: 1rem !important;     /* Slightly smaller for mobile */
     }
 }
 
