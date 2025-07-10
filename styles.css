@@ -1078,3 +1078,33 @@ footer h2 {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
+/* Make title clickable without changing appearance */
+.title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title-link h1:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Make couple photo clickable */
+.photo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.photo-link:hover {
+    transform: scale(1.02);
+}
+
+.photo-link:hover .couple-photo {
+    opacity: 0.9;
+}
