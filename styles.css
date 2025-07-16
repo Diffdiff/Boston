@@ -292,14 +292,16 @@ header nav a:hover {
 
 /* Weather section styling */
 #weather {
-    background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+    background: linear-gradient(135deg, var(--fall-cream) 0%, rgba(251, 191, 36, 0.3) 100%);
     padding: 4rem 2rem;
     margin: 3rem 0;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
 }
 
 #weather h2 {
     text-align: center;
-    color: #2c3e50;
+    color: var(--fall-burgundy);
     font-size: 2.2rem;
     margin-bottom: 3rem;
     font-weight: bold;
@@ -319,6 +321,7 @@ header nav a:hover {
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     transition: transform 0.3s ease;
+    border: 2px solid var(--fall-orange);
 }
 
 .weather-widget:hover {
@@ -332,12 +335,12 @@ header nav a:hover {
 }
 
 .boston-weather .weather-header {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
     color: white;
 }
 
 .mountains-weather .weather-header {
-    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
     color: white;
 }
 
@@ -345,6 +348,7 @@ header nav a:hover {
     margin: 0 0 1rem 0;
     font-size: 1.4rem;
     font-weight: bold;
+    color: white;
 }
 
 .weather-icon {
@@ -359,7 +363,7 @@ header nav a:hover {
 }
 
 .weather-description {
-    color: #64748b;
+    color: var(--fall-brown);
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.5;
@@ -378,11 +382,11 @@ header nav a:hover {
 }
 
 .boston-btn {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
 }
 
 .mountains-btn {
-    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
 }
 
 .weather-btn:hover {
@@ -398,13 +402,13 @@ header nav a:hover {
 }
 
 .feature-badge {
-    background: #f1f5f9;
-    color: #475569;
+    background: var(--fall-cream);
+    color: var(--fall-brown);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--fall-orange);
 }
 
 /* Weather Resources */
@@ -415,7 +419,7 @@ header nav a:hover {
 
 .weather-resources h3 {
     text-align: center;
-    color: #2c3e50;
+    color: var(--fall-burgundy);
     font-size: 1.8rem;
     margin-bottom: 2rem;
     font-weight: bold;
@@ -434,6 +438,7 @@ header nav a:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    border: 2px solid var(--fall-orange);
 }
 
 .weather-resource-card:hover {
@@ -453,14 +458,14 @@ header nav a:hover {
 }
 
 .weather-resource-card h4 {
-    color: #2c3e50;
+    color: var(--fall-burgundy);
     margin: 0;
     font-size: 1.3rem;
     font-weight: bold;
 }
 
 .weather-resource-card p {
-    color: #64748b;
+    color: var(--fall-brown);
     margin: 1rem 0 1.5rem 0;
     line-height: 1.5;
 }
@@ -476,11 +481,11 @@ header nav a:hover {
 }
 
 .summit-btn {
-    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    background: linear-gradient(135deg, var(--fall-burgundy), var(--fall-red));
 }
 
 .foliage-btn {
-    background: linear-gradient(135deg, #ea580c, #dc2626);
+    background: linear-gradient(135deg, var(--fall-orange), var(--fall-brown));
 }
 
 .resource-btn:hover {
