@@ -290,352 +290,6 @@ header nav a:hover {
     line-height: 1.4;
 }
 
-/* Weather section styling */
-#weather {
-    background: linear-gradient(135deg, var(--fall-cream) 0%, rgba(251, 191, 36, 0.3) 100%);
-    padding: 4rem 2rem;
-    margin: 3rem 0;
-    border-radius: 15px;
-    border: 2px solid var(--fall-orange);
-}
-
-#weather h2 {
-    text-align: center;
-    color: var(--fall-burgundy);
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    font-weight: bold;
-}
-
-.weather-widget-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto 3rem auto;
-}
-
-.weather-widget {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-    transition: transform 0.3s ease;
-    border: 2px solid var(--fall-orange);
-}
-
-.weather-widget:hover {
-    transform: translateY(-8px);
-}
-
-.weather-header {
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-}
-
-.boston-weather .weather-header {
-    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
-    color: white;
-}
-
-.mountains-weather .weather-header {
-    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
-    color: white;
-}
-
-.weather-header h3 {
-    margin: 0 0 1rem 0;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
-}
-
-.weather-icon {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-.weather-content {
-    padding: 2rem;
-    text-align: center;
-}
-
-.weather-description {
-    color: var(--fall-brown);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-.weather-btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.boston-btn {
-    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
-}
-
-.mountains-btn {
-    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
-}
-
-.weather-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.weather-features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.feature-badge {
-    background: var(--fall-cream);
-    color: var(--fall-brown);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid var(--fall-orange);
-}
-
-/* Weather Resources */
-.weather-resources {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.weather-resources h3 {
-    text-align: center;
-    color: var(--fall-burgundy);
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
-}
-
-.weather-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.weather-resource-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    border: 2px solid var(--fall-orange);
-}
-
-.weather-resource-card:hover {
-    transform: translateY(-5px);
-}
-
-.resource-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.resource-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.weather-resource-card h4 {
-    color: var(--fall-burgundy);
-    margin: 0;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.weather-resource-card p {
-    color: var(--fall-brown);
-    margin: 1rem 0 1.5rem 0;
-    line-height: 1.5;
-}
-
-.resource-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.summit-btn {
-    background: linear-gradient(135deg, var(--fall-burgundy), var(--fall-red));
-}
-
-.foliage-btn {
-    background: linear-gradient(135deg, var(--fall-orange), var(--fall-brown));
-}
-
-.resource-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Container and width constraints */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Map section styles */
-.map-container {
-    position: relative;
-    max-width: 600px;
-    margin: 2rem auto;
-}
-
-.new-england-map {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-.map-marker {
-    position: absolute;
-    background: #003366cc;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    white-space: nowrap;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* Calendar styles */
-#calendar {
-    margin: 2rem auto;
-    max-width: 1200px;
-    padding: 0 1rem;
-}
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-}
-.calendar-day {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 1rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.calendar-date {
-    font-weight: bold;
-    color: #003366;
-    margin-bottom: 0.2rem;
-}
-.calendar-city {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-.calendar-day ul {
-    margin: 0;
-    padding-left: 1.2rem;
-}
-.calendar-day li {
-    margin-bottom: 0.3rem;
-}
-
-/* Location section styling */
-.location-section {
-    margin-bottom: 3rem;
-}
-
-.location-title {
-    color: #003366;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem 0;
-    border-bottom: 2px solid #e3eafc;
-}
-
-/* Journey section styling */
-.journey-location {
-    margin-bottom: 4rem;
-    border: 1px solid #e3eafc;
-    border-radius: 12px;
-    padding: 2rem;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.attractions-section, .itinerary-section {
-    margin-bottom: 2rem;
-}
-
-.attractions-section h4, .itinerary-section h4 {
-    color: #003366;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    border-bottom: 1px solid #e3eafc;
-    padding-bottom: 0.5rem;
-}
-
-.itinerary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-.itinerary-day {
-    background: #f8f9fa;
-    border-radius: 8px;
-    padding: 1.5rem;
-    border-left: 4px solid #003366;
-}
-
-.day-header {
-    margin-bottom: 1rem;
-}
-
-.day-date {
-    font-weight: bold;
-    color: #003366;
-    font-size: 1.1rem;
-}
-
-.itinerary-day ul {
-    margin: 0;
-    padding-left: 1.2rem;
-}
-
-.itinerary-day li {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-
 /* Restaurant Section Styling */
 .restaurant-section {
     margin: 2rem 0;
@@ -889,68 +543,6 @@ header nav a:hover {
 .weather-resource-card p {
     color: var(--fall-brown);
     margin: 1rem 0 1.5rem 0;
-    line-height: 1.5;
-}
-
-.resource-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.summit-btn {
-    background: linear-gradient(135deg, var(--fall-burgundy), var(--fall-red));
-}
-
-.foliage-btn {
-    background: linear-gradient(135deg, var(--fall-orange), var(--fall-brown));
-}
-
-.resource-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Container and width constraints */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* Map section styles */
-.map-container {
-    position: relative;
-    max-width: 600px;
-    margin: 2rem auto;
-}
-
-.new-england-map {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-}
-
-.map-marker {
-    position: absolute;
-    background: #003366cc;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    white-space: nowrap;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* Calendar styles */
-#calendar {
     margin: 2rem auto;
     max-width: 1200px;
     padding: 0 1rem;
@@ -1629,3 +1221,81 @@ footer h2 {
 }
 
 /* End of Weather Section */
+
+/* Journey Navigation Section */
+.journey-nav {
+    background: linear-gradient(135deg, var(--fall-cream) 0%, rgba(251, 191, 36, 0.3) 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
+    margin: 2rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.journey-nav h3 {
+    color: var(--fall-burgundy);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--fall-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.nav-item a {
+    color: var(--fall-burgundy);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+}
+
+.nav-item a:hover {
+    color: var(--fall-red);
+}
+
+/* Style the "Jump to:" text */
+.nav-intro {
+    color: var(--fall-brown);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .nav-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+    }
+    
+    .nav-item {
+        padding: 0.8rem;
+    }
+    
+    .nav-item a {
+        font-size: 0.9rem;
+    }
+}
