@@ -1136,3 +1136,137 @@ footer h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Weather Section */
+section#weather {
+    background: rgba(254, 243, 199, 0.9);
+    padding: 3rem 1rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section#weather h2 {
+    color: #003366;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.weather-widget-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.weather-widget {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.weather-widget h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.weather-embed {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.weather-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Weather Resources */
+.weather-resources {
+    margin-top: 2rem;
+}
+
+.weather-resources h3 {
+    color: #003366;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.weather-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.card-link {
+    background: var(--fall-orange);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.card-link:hover {
+    background: var(--fall-red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments for weather section */
+@media (max-width: 768px) {
+    section#weather {
+        padding: 2rem 1rem;
+    }
+    
+    .weather-widget-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .weather-card {
+        padding: 15px;
+    }
+    
+    .weather-widget h3 {
+        font-size: 1.2rem;
+    }
+    
+    .weather-resources h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* End of Weather Section */
