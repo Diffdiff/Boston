@@ -292,202 +292,200 @@ header nav a:hover {
 
 /* Weather section styling */
 #weather {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+}
+
+#weather h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
 }
 
 .weather-widget-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
 }
 
 .weather-widget {
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
 }
 
 .weather-widget:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
 }
 
 .weather-header {
-    padding: 25px;
+    padding: 2rem;
+    text-align: center;
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .boston-weather .weather-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     color: white;
 }
 
 .mountains-weather .weather-header {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
     color: white;
 }
 
-.weather-icon {
-    font-size: 2.5rem;
-    animation: float 3s ease-in-out infinite;
+.weather-header h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .weather-content {
-    padding: 30px;
+    padding: 2rem;
     text-align: center;
 }
 
 .weather-description {
-    margin-bottom: 20px;
-    color: #666;
+    color: #64748b;
+    margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 .weather-btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.1rem;
+    margin-bottom: 1.5rem;
     transition: all 0.3s ease;
-    margin-bottom: 25px;
 }
 
 .boston-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
 }
 
 .mountains-btn {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #059669 0%, #0d9488 100%);
 }
 
 .weather-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.weather-highlights {
+.weather-features {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.5rem;
 }
 
-.highlight-item {
-    background: #f8f9fa;
-    padding: 8px 12px;
+.feature-badge {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
-    color: #495057;
-    border: 2px solid #e9ecef;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
 }
 
+/* Weather Resources */
 .weather-resources {
-    margin-top: 50px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .weather-resources h3 {
     text-align: center;
-    margin-bottom: 30px;
     color: #2c3e50;
     font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
 
 .weather-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 2rem;
 }
 
-.weather-card {
+.weather-resource-card {
     background: white;
-    padding: 30px;
+    padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.weather-card:hover {
-    transform: translateY(-3px);
+.weather-resource-card:hover {
+    transform: translateY(-5px);
 }
 
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.resource-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
-.observatory-card {
-    border-left: 5px solid #3498db;
+.resource-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.foliage-card {
-    border-left: 5px solid #e67e22;
-}
-
-.weather-card h4 {
+.weather-resource-card h4 {
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin: 0;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
-.weather-card p {
-    color: #7f8c8d;
-    margin-bottom: 20px;
+.weather-resource-card p {
+    color: #64748b;
+    margin: 1rem 0 1.5rem 0;
     line-height: 1.5;
 }
 
-.card-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card-link {
-    padding: 10px 20px;
+.resource-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.observatory-link {
-    background: linear-gradient(135deg, #3498db, #2980b9);
+.summit-btn {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
 }
 
-.foliage-link {
-    background: linear-gradient(135deg, #e67e22, #d35400);
+.foliage-btn {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
 }
 
-.card-link:hover {
+.resource-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-@media (max-width: 768px) {
-    .weather-widget-container,
-    .weather-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .weather-highlights {
-        justify-content: center;
-    }
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* Container and width constraints */
