@@ -292,279 +292,345 @@ header nav a:hover {
 
 /* Weather section styling */
 #weather {
-    background: #f8f9fa;
-    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 4rem 0;
 }
 
-.weather-embed {
-    min-height: 300px;
+.weather-widget-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.weather-widget {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.weather-header {
+    padding: 25px;
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.boston-weather .weather-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.mountains-weather .weather-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.weather-icon {
+    font-size: 2.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.weather-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.weather-description {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.weather-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.boston-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.mountains-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.weather-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.weather-highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.highlight-item {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #495057;
+    border: 2px solid #e9ecef;
+}
+
+.weather-resources {
+    margin-top: 50px;
+}
+
+.weather-resources h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 1.8rem;
 }
 
 .weather-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 30px;
 }
 
 .weather-card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.observatory-card {
+    border-left: 5px solid #3498db;
+}
+
+.foliage-card {
+    border-left: 5px solid #e67e22;
+}
+
+.weather-card h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.weather-card p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-link {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.observatory-link {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.foliage-link {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.card-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
+    .weather-widget-container,
     .weather-grid {
         grid-template-columns: 1fr;
     }
+    
+    .weather-highlights {
+        justify-content: center;
+    }
 }
 
-/* Interactive Journey Map */
-.journey-map {
-    background: #f8f9fa;
-    padding: 3rem 1rem;
-    text-align: center;
+/* Container and width constraints */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
+/* Map section styles */
 .map-container {
     position: relative;
     max-width: 600px;
     margin: 2rem auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 2rem;
 }
 
-.route-marker {
-    position: absolute;
-    background: #003366;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    z-index: 10;
-}
-
-.route-marker.current {
-    background: #e74c3c;
-    animation: pulse 2s infinite;
-}
-
-.route-line {
-    position: absolute;
-    background: #003366;
-    height: 3px;
-    z-index: 5;
-}
-
-@keyframes pulse {
-    0% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.1); }
-    100% { transform: translate(-50%, -50%) scale(1); }
-}
-
-/* Map markers positioning */
-.marker-boston { top: 65%; left: 85%; }
-.marker-salem { top: 60%; left: 87%; }
-.marker-portsmouth { top: 55%; left: 82%; }
-.marker-york { top: 50%; left: 80%; }
-.marker-cape-elizabeth { top: 48%; left: 78%; }
-.marker-portland { top: 47%; left: 77%; }
-.marker-kennebunkport { top: 52%; left: 79%; }
-.marker-conway { top: 45%; left: 70%; }
-.marker-vermont { top: 40%; left: 65%; }
-
-/* Route lines */
-.line-1 { top: 62%; left: 85%; width: 3%; transform: rotate(15deg); }
-.line-2 { top: 57%; left: 84%; width: 4%; transform: rotate(-10deg); }
-.line-3 { top: 52%; left: 80%; width: 3%; transform: rotate(-15deg); }
-.line-4 { top: 49%; left: 78%; width: 2%; transform: rotate(-20deg); }
-.line-5 { top: 47%; left: 73%; width: 8%; transform: rotate(25deg); }
-.line-6 { top: 42%; left: 67%; width: 15%; transform: rotate(45deg); }
-
-/* Journey Navigation */
-.journey-nav {
-    background: linear-gradient(135deg, var(--fall-cream), var(--fall-yellow));
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 2px solid var(--fall-orange);
-    margin-bottom: 2rem;
-    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.2);
-}
-
-.nav-title {
-    font-weight: 600;
-    color: #003366;
-    margin-bottom: 0.5rem;
-}
-
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.nav-link {
-    background: var(--fall-orange);
-    color: white;
-    padding: 0.75rem 1rem;
+.new-england-map {
+    width: 100%;
     border-radius: 8px;
-    text-decoration: none;
+    display: block;
+}
+
+.map-marker {
+    position: absolute;
+    background: #003366cc;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
     font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Calendar styles */
+#calendar {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+.calendar-day {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 1rem 1.2rem;
     display: flex;
     flex-direction: column;
-    min-width: 120px;
+    align-items: flex-start;
 }
-
-.nav-location {
-    font-size: 1rem;
+.calendar-date {
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    color: #003366;
+    margin-bottom: 0.2rem;
 }
-
-.nav-date {
-    font-size: 0.8rem;
-    opacity: 0.9;
-    font-weight: normal;
-    color: var(--fall-cream);
-}
-
-.nav-link:hover {
-    background: var(--fall-red);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.nav-link:hover .nav-date {
-    color: white;
-}
-
-/* Restaurant Section */
-.restaurant-section {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 3px solid var(--fall-orange);
-    background: linear-gradient(45deg, rgba(254, 243, 199, 0.8), rgba(254, 215, 170, 0.6));
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
-}
-
-.restaurant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.restaurant-card {
-    background: linear-gradient(135deg, #FEF3C7 0%, #FBBF24 100%);
-    padding: 1.5rem;
-    border-radius: 12px;
-    border-left: 5px solid var(--fall-orange);
-    border-right: 2px solid var(--fall-red);
-    box-shadow: 0 6px 20px rgba(220, 38, 38, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.restaurant-card::before {
-    content: "🍂";
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.2rem;
-    opacity: 0.7;
-}
-
-.restaurant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3);
-}
-
-.restaurant-card h5 {
-    color: var(--fall-burgundy);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    border-bottom: 2px solid var(--fall-orange);
-    padding-bottom: 0.5rem;
+.calendar-city {
+    font-size: 1.1rem;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+}
+.calendar-day ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+.calendar-day li {
+    margin-bottom: 0.3rem;
 }
 
-.restaurant-card ul {
-    list-style: none;
-    padding: 0;
+/* Location section styling */
+.location-section {
+    margin-bottom: 3rem;
 }
 
-.restaurant-card li {
+.location-title {
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
     padding: 0.5rem 0;
-    color: var(--fall-brown);
-    position: relative;
-    padding-left: 2rem;
-    font-weight: 500;
+    border-bottom: 2px solid #e3eafc;
 }
 
-.restaurant-card li:before {
-    content: "🍁";
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
+/* Journey section styling */
+.journey-location {
+    margin-bottom: 4rem;
+    border: 1px solid #e3eafc;
+    border-radius: 12px;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.attractions-section, .itinerary-section {
+    margin-bottom: 2rem;
+}
+
+.attractions-section h4, .itinerary-section h4 {
+    color: #003366;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #e3eafc;
+    padding-bottom: 0.5rem;
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.itinerary-day {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #003366;
+}
+
+.day-header {
+    margin-bottom: 1rem;
+}
+
+.day-date {
+    font-weight: bold;
+    color: #003366;
     font-size: 1.1rem;
 }
 
-.restaurant-card a {
-    color: var(--fall-burgundy);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.itinerary-day ul {
+    margin: 0;
+    padding-left: 1.2rem;
 }
 
-.restaurant-card a:hover {
-    color: var(--fall-orange);
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Fall-themed section headers */
-.restaurant-section h4 {
-    color: var(--fall-burgundy);
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    position: relative;
-}
-
-.restaurant-section h4::before {
-    content: "🍂 ";
-}
-
-.restaurant-section h4::after {
-    content: " 🍂";
-}
-
-/* Add fall colors to location titles */
-.location-title {
-    background: linear-gradient(45deg, var(--fall-orange), var(--fall-red));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: none;
+.itinerary-day li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
 
 /* Enhanced Footer Styling */
@@ -1156,33 +1222,6 @@ section#weather h2 {
 }
 
 .weather-widget-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.weather-widget {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.weather-widget h3 {
-    margin-bottom: 15px;
-    color: #2c3e50;
-    text-align: center;
-}
-
-.weather-embed {
-    min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.weather-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
