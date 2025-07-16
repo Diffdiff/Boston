@@ -872,25 +872,17 @@
         <!-- Weather Widget -->
         <div class="weather-widget-container">
             <div class="weather-widget">
-                <h3>Boston 10-Day Forecast</h3>
-                <iframe 
-                    src="https://www.weather.com/weather/tenday/l/Boston+MA+USMA0046:1:US" 
-                    width="100%" 
-                    height="400" 
-                    frameborder="0" 
-                    allowtransparency="true">
-                </iframe>
+                <h3>Boston Weather</h3>
+                <div class="weather-embed">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/42d36n71d06/boston/" data-label_1="BOSTON" data-label_2="WEATHER" data-theme="original">BOSTON WEATHER</a>
+                </div>
             </div>
             
             <div class="weather-widget">
                 <h3>White Mountains Weather</h3>
-                <iframe 
-                    src="https://www.weather.com/weather/tenday/l/North+Conway+NH+USNH0177:1:US" 
-                    width="100%" 
-                    height="400" 
-                    frameborder="0" 
-                    allowtransparency="true">
-                </iframe>
+                <div class="weather-embed">
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/44d26n71d30/north-conway/" data-label_1="NORTH CONWAY" data-label_2="WEATHER" data-theme="original">NORTH CONWAY WEATHER</a>
+                </div>
             </div>
         </div>
         
@@ -917,6 +909,11 @@
         </div>
     </div>
 </section>
+
+<!-- Add this script before closing </body> tag -->
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-js');
+</script>
 
     <!-- Photo Challenge Section -->
     <section id="photo-challenge">
