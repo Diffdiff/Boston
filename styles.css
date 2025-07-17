@@ -1006,11 +1006,13 @@ footer h2 {
     position: relative;
 }
 
-/* Remove ALL pseudo-elements to clean this up */
+/* Add the subway icon back via CSS, but just one */
 .metro-section h4::before {
-    display: none;
+    content: "🚇 ";
+    margin-right: 0.5rem;
 }
 
+/* Make sure no duplicate appears */
 .metro-section h4::after {
     display: none;
 }
@@ -1041,6 +1043,11 @@ footer h2 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+/* Make sure the line icons show up properly */
+.metro-card h5:nth-of-type(1) {
+    color: #0066cc; /* Blue for Blue Line */
 }
 
 .metro-card p {
