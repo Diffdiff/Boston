@@ -410,13 +410,14 @@ header nav a:hover {
     position: relative;
 }
 
+/* Lighter weather header colors for better readability */
 .boston-weather .weather-header {
-    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #f87171 100%); /* Lighter red gradient */
     color: white;
 }
 
 .mountains-weather .weather-header {
-    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
+    background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%); /* Lighter orange gradient */
     color: white;
 }
 
@@ -457,12 +458,13 @@ header nav a:hover {
     transition: all 0.3s ease;
 }
 
+/* Also update the button colors to match */
 .boston-btn {
-    background: linear-gradient(135deg, var(--fall-burgundy) 0%, var(--fall-red) 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #f87171 100%);
 }
 
 .mountains-btn {
-    background: linear-gradient(135deg, var(--fall-orange) 0%, var(--fall-brown) 100%);
+    background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%);
 }
 
 .weather-btn:hover {
