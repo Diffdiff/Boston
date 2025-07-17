@@ -1286,18 +1286,188 @@ footer h2 {
     font-size: 1.1rem;
 }
 
+/* Photo Challenge Section */
+#photo-challenge {
+    background: linear-gradient(135deg, var(--fall-cream) 0%, rgba(251, 191, 36, 0.3) 100%);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
+}
+
+#photo-challenge h2 {
+    text-align: center;
+    color: var(--fall-burgundy);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#photo-challenge > .container > p {
+    text-align: center;
+    color: var(--fall-brown);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.challenge-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--fall-orange);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.challenge-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.challenge-checkbox {
+    font-size: 1.5rem;
+    color: var(--fall-orange);
+    font-weight: bold;
+    min-width: 25px;
+}
+
+.challenge-text {
+    color: var(--fall-brown);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.challenge-item:hover .challenge-checkbox {
+    color: var(--fall-red);
+    transform: scale(1.1);
+}
+
+/* Packing List Section */
+#packing {
+    background: linear-gradient(135deg, var(--fall-cream) 0%, rgba(251, 191, 36, 0.3) 100%);
+    padding: 4rem 2rem;
+    margin: 3rem 0;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
+}
+
+#packing h2 {
+    text-align: center;
+    color: var(--fall-burgundy);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.packing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.packing-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--fall-orange);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.packing-category:hover {
+    transform: translateY(-5px);
+}
+
+.packing-category h3 {
+    color: var(--fall-burgundy);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--fall-orange);
+    padding-bottom: 0.5rem;
+}
+
+.packing-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.packing-category li {
+    color: var(--fall-brown);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: var(--fall-cream);
+    border-radius: 8px;
+    border-left: 4px solid var(--fall-orange);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.packing-category li:hover {
+    background: rgba(251, 191, 36, 0.2);
+    border-left-color: var(--fall-red);
+    transform: translateX(5px);
+}
+
+.packing-category li:before {
+    content: "✓";
+    color: var(--fall-orange);
+    font-weight: bold;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
-    .nav-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 0.8rem;
+    .challenge-grid,
+    .packing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
-    .nav-item {
-        padding: 0.8rem;
+    #photo-challenge,
+    #packing {
+        padding: 3rem 1rem;
     }
     
-    .nav-item a {
+    .challenge-item {
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .challenge-checkbox {
+        margin-bottom: 1rem;
+    }
+    
+    .packing-category {
+        padding: 1.5rem;
+    }
+    
+    .packing-category h3 {
+        font-size: 1.2rem;
+    }
+    
+    .packing-category li {
         font-size: 0.9rem;
     }
 }
