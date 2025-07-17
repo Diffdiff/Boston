@@ -1002,17 +1002,15 @@ footer h2 {
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
     font-weight: bold;
-    text-align: center; /* Center the title */
+    text-align: center;
     position: relative;
 }
 
+/* Remove ALL pseudo-elements to clean this up */
 .metro-section h4::before {
-    content: "🚇";
-    margin-right: 0.5rem; /* Add space after emoji */
-    font-size: 2rem; /* Make emoji slightly smaller */
+    display: none;
 }
 
-/* Remove the duplicate Metro Guide text */
 .metro-section h4::after {
     display: none;
 }
