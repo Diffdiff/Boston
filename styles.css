@@ -306,11 +306,11 @@ header nav a:hover {
     line-height: 1.4;
 }
 
-/* Restaurant Section Styling - Better Fall Colors */
+/* Restaurant Section Styling - FIXED Fall Colors */
 .restaurant-section {
     margin: 2rem 0;
     padding: 2.5rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
     border-radius: 20px;
     box-shadow: 
         0 10px 30px rgba(0, 0, 0, 0.15),
@@ -327,13 +327,32 @@ header nav a:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 45, 18, 0.03) 0%, transparent 70%);
     transform: rotate(45deg);
     pointer-events: none;
 }
 
+.restaurant-section h4 {
+    color: var(--fall-burgundy);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
 .restaurant-card {
-    background: linear-gradient(145deg, #ffffff 0%, rgba(254, 243, 199, 0.6) 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 
@@ -387,7 +406,7 @@ header nav a:hover {
 .restaurant-card li {
     margin-bottom: 1rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
     border-radius: 10px;
     border-left: 4px solid var(--fall-orange);
     transition: all 0.3s ease;
@@ -405,10 +424,28 @@ header nav a:hover {
 }
 
 .restaurant-card li:hover {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(254, 243, 199, 0.7) 100%);
+    background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
     border-left-color: var(--fall-red);
     transform: translateX(8px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card li strong {
+    color: var(--fall-burgundy);
+    font-weight: bold;
+}
+
+.restaurant-card li a {
+    color: var(--fall-red);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.restaurant-card li a:hover {
+    color: var(--fall-burgundy);
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Container and width constraints */
@@ -554,11 +591,11 @@ header nav a:hover {
     line-height: 1.4;
 }
 
-/* Restaurant Section Styling - Better Fall Colors */
+/* Restaurant Section Styling - FIXED Fall Colors */
 .restaurant-section {
     margin: 2rem 0;
     padding: 2.5rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 243, 199, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.9) 100%);
     border-radius: 20px;
     box-shadow: 
         0 10px 30px rgba(0, 0, 0, 0.15),
@@ -575,13 +612,32 @@ header nav a:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(124, 45, 18, 0.03) 0%, transparent 70%);
     transform: rotate(45deg);
     pointer-events: none;
 }
 
+.restaurant-section h4 {
+    color: var(--fall-burgundy);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
 .restaurant-card {
-    background: linear-gradient(145deg, #ffffff 0%, rgba(254, 243, 199, 0.6) 100%);
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 
@@ -635,7 +691,7 @@ header nav a:hover {
 .restaurant-card li {
     margin-bottom: 1rem;
     padding: 1rem;
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.05) 0%, rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
     border-radius: 10px;
     border-left: 4px solid var(--fall-orange);
     transition: all 0.3s ease;
@@ -653,10 +709,28 @@ header nav a:hover {
 }
 
 .restaurant-card li:hover {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(254, 243, 199, 0.7) 100%);
+    background: linear-gradient(135deg, #e2e8f0 0%, #f8fafc 100%);
     border-left-color: var(--fall-red);
     transform: translateX(8px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-card li strong {
+    color: var(--fall-burgundy);
+    font-weight: bold;
+}
+
+.restaurant-card li a {
+    color: var(--fall-red);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.restaurant-card li a:hover {
+    color: var(--fall-burgundy);
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Fix other sections with better fall colors */
