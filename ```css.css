@@ -147,8 +147,9 @@ header nav a:hover {
 
 .card img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Standard landscape ratio for uniformity */
-    object-fit: cover; /* Crop to fill the space neatly */
+    aspect-ratio: 16 / 9; /* Enforce consistent landscape ratio */
+    object-fit: cover; /* Crop edges if needed to fill the space without distortion */
+    object-position: center; /* Center the crop */
     display: block;
 }
 
@@ -239,8 +240,9 @@ header nav a:hover {
 
 .accommodation-photo {
     width: 200px;
-    aspect-ratio: 4 / 3; /* Consistent ratio for accommodation images */
-    object-fit: cover; /* Crop to fill neatly */
+    aspect-ratio: 16 / 9; /* Use same ratio as cards for consistency */
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -511,7 +513,7 @@ footer {
 
     .accommodation-photo {
         width: 100%;
-        aspect-ratio: 16 / 9; /* Adjust for mobile */
+        aspect-ratio: 16 / 9;
     }
 
     .card img {
