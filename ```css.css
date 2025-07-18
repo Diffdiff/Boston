@@ -143,12 +143,13 @@ header nav a:hover {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    min-height: 300px; /* Ensure cards are similar height */
 }
 
 .card img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Enforce consistent landscape ratio */
-    object-fit: cover; /* Crop edges if needed to fill the space without distortion */
+    height: 200px; /* Fixed height for all attraction images */
+    object-fit: cover; /* Crop to fit neatly */
     object-position: center; /* Center the crop */
     display: block;
 }
@@ -239,8 +240,8 @@ header nav a:hover {
 }
 
 .accommodation-photo {
-    width: 200px;
-    aspect-ratio: 16 / 9; /* Use same ratio as cards for consistency */
+    width: 300px; /* Slightly wider for accommodation */
+    height: 200px; /* Same height as cards */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -513,10 +514,14 @@ footer {
 
     .accommodation-photo {
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: 200px;
+    }
+
+    .card {
+        min-height: auto;
     }
 
     .card img {
-        aspect-ratio: 16 / 9;
+        height: 150px; /* Smaller fixed height for mobile */
     }
 }
