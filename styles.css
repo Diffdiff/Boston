@@ -118,6 +118,7 @@ header nav a:hover {
 
 /* Journey Section */
 /* Journey Section */
+/* Journey Section */
 #journey {
     padding: 40px 20px;
 }
@@ -133,34 +134,34 @@ header nav a:hover {
 }
 
 .container h2 {
-    text-align: center; /* Center the "Drew and Julia's Fall New England Journey" title */
-    font-size: 1.8em; /* Slightly larger for emphasis */
-    color: #8b4513; /* Fall brown for theme */
+    text-align: center;
+    font-size: 1.8em;
+    color: #8b4513;
 }
 
 .nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    justify-content: center; /* Center the nav grid */
+    justify-content: center;
 }
 
 .nav-item a {
     display: block;
-    padding: 12px; /* Increased padding for larger feel */
-    background-color: #ffdab9; /* Light peach-orange for fall theme, replaces white */
+    padding: 12px;
+    background-color: #ffdab9;
     text-decoration: none;
-    color: #4d2600; /* Dark brown text for legibility and fall vibe, replaces black */
-    border-radius: 8px; /* Softer corners */
-    font-size: 1.3em; /* 30% larger font size (assuming base 1em) */
+    color: #4d2600;
+    border-radius: 8px;
+    font-size: 1.3em;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .nav-item a:hover {
-    background-color: #ffb347; /* Darker orange on hover for interactivity */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* Lifted shadow */
+    background-color: #ffb347;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .journey-location {
@@ -191,8 +192,8 @@ header nav a:hover {
 
 .attractions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Increased min-width by ~30% (200 * 1.3) */
-    gap: 20px; /* Slightly increased gap for breathing room */
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr)); /* Increased by 25% */
+    gap: 25px; /* Increased gap for larger cards */
 }
 
 .card {
@@ -201,16 +202,16 @@ header nav a:hover {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    padding: 15px; /* Increased padding by ~30% */
+    padding: 20px; /* Increased by 25% */
     display: flex;
     flex-direction: column;
-    min-height: 364px; /* Increased by 30% (280 * 1.3) */
+    min-height: 455px; /* Increased by 25% */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .card img {
     width: 100%;
-    height: 182px; /* Increased by 30% (140 * 1.3) */
+    height: 228px; /* Increased by 25% */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -218,13 +219,13 @@ header nav a:hover {
 }
 
 .card h3 {
-    font-size: 1.3em; /* Slightly larger text */
+    font-size: 1.3em;
     margin: 10px 0 5px;
     padding: 0 10px;
 }
 
 .card p {
-    font-size: 1em; /* Slightly larger text */
+    font-size: 1em;
     padding: 0 10px;
     margin-bottom: 10px;
 }
@@ -239,7 +240,7 @@ header nav a:hover {
     margin: 5px;
     color: #007bff;
     text-decoration: none;
-    font-size: 1em; /* Slightly larger links */
+    font-size: 1em;
 }
 
 .card-link:hover {
@@ -308,13 +309,14 @@ header nav a:hover {
     border-radius: 8px;
     overflow: hidden;
     align-items: stretch;
-    max-width: 600px;
+    max-width: 600px; /* Adjust if needed for larger content */
     margin: 0 auto;
+    padding: 20px; /* Increased by 25% */
 }
 
 .accommodation-photo {
-    width: 200px;
-    height: 182px; /* Match attraction image height */
+    width: 250px; /* Increased by 25% from 200px */
+    height: 228px; /* Match attraction image height */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -324,6 +326,8 @@ header nav a:hover {
     padding: 15px;
     flex: 1;
 }
+
+/* Rest of your CSS remains unchanged... */
 
 .metro-link-section {
     text-align: center;
