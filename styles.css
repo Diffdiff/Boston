@@ -39,7 +39,7 @@ header nav a:hover {
 /* Hero Section */
 .hero {
     background-color: #ffcc00; /* Fall yellow/orange */
-    padding: 40px 20px;
+    padding: 30px 20px; /* Reduced padding for tighter layout */
     text-align: center;
 }
 
@@ -71,10 +71,11 @@ header nav a:hover {
 }
 
 .hero-img {
-    max-width: 50%; /* Shrink the New England map to half the container width */
+    max-width: 30%; /* Further reduced to 30% of container */
+    max-height: 200px; /* Cap height to prevent stretching */
     height: auto;
     display: block;
-    margin: 20px auto; /* Center it with some padding */
+    margin: 20px auto; /* Center with padding */
 }
 
 /* Journey Section */
