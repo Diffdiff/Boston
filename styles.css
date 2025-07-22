@@ -114,10 +114,6 @@ header nav a:hover {
     margin: 20px auto;
 }
 
-/* Rest of your CSS remains unchanged... */
-
-/* Journey Section */
-/* Journey Section */
 /* Journey Section */
 #journey {
     padding: 40px 20px;
@@ -192,8 +188,8 @@ header nav a:hover {
 
 .attractions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr)); /* Increased by 25% */
-    gap: 25px; /* Increased gap for larger cards */
+    grid-template-columns: repeat(auto-fit, minmax(364px, 1fr)); /* Increased by 15% from 325px */
+    gap: 30px;
 }
 
 .card {
@@ -202,16 +198,16 @@ header nav a:hover {
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    padding: 20px; /* Increased by 25% */
+    padding: 23px; /* Increased by 15% from 20px */
     display: flex;
     flex-direction: column;
-    min-height: 455px; /* Increased by 25% */
+    min-height: 523px; /* Increased by 15% from 455px */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .card img {
     width: 100%;
-    height: 228px; /* Increased by 25% */
+    height: 262px; /* Increased by 15% from 228px */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -219,13 +215,13 @@ header nav a:hover {
 }
 
 .card h3 {
-    font-size: 1.3em;
+    font-size: 1.5em; /* Adjusted for larger card */
     margin: 10px 0 5px;
     padding: 0 10px;
 }
 
 .card p {
-    font-size: 1em;
+    font-size: 1.2em; /* Adjusted for larger card */
     padding: 0 10px;
     margin-bottom: 10px;
 }
@@ -309,14 +305,14 @@ header nav a:hover {
     border-radius: 8px;
     overflow: hidden;
     align-items: stretch;
-    max-width: 600px; /* Adjust if needed for larger content */
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px; /* Increased by 25% */
+    padding: 23px; /* Increased by 15% from 20px */
 }
 
 .accommodation-photo {
-    width: 250px; /* Increased by 25% from 200px */
-    height: 228px; /* Match attraction image height */
+    width: 287px; /* Increased by 15% from 250px */
+    height: 262px; /* Increased by 15% from 228px */
     object-fit: cover;
     object-position: center;
     display: block;
@@ -328,242 +324,6 @@ header nav a:hover {
 }
 
 /* Rest of your CSS remains unchanged... */
-
-.metro-link-section {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.metro-nav-link {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.metro-nav-link:hover {
-    background: #0056b3;
-}
-
-/* Weather Section */
-#weather {
-    padding: 40px 20px;
-    background: #e0f7fa;
-}
-
-.weather-widget-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.weather-widget {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-.weather-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.weather-icon {
-    font-size: 2em;
-}
-
-.weather-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.weather-btn:hover {
-    background: #0056b3;
-}
-
-.weather-resources {
-    margin-top: 30px;
-}
-
-.weather-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.weather-resource-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.resource-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.resource-icon {
-    font-size: 1.5em;
-}
-
-.resource-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.resource-btn:hover {
-    background: #218838;
-}
-
-/* Photo Challenge */
-#photo-challenge {
-    padding: 40px 20px;
-    background: #fff3e0;
-}
-
-.challenge-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.challenge-item {
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Packing List */
-#packing {
-    padding: 40px 20px;
-}
-
-.packing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.packing-category {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.packing-category ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/* Boston Metro Guide */
-.metro-section {
-    padding: 40px 20px;
-    background: #f0f4f8;
-}
-
-.metro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.metro-card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.metro-card ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.metro-links {
-    margin-top: 10px;
-}
-
-.metro-link {
-    display: inline-block;
-    margin: 5px 0;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.metro-link:hover {
-    text-decoration: underline;
-}
-
-.metro-tips {
-    margin-top: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.metro-tips ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.qr-section {
-    text-align: center;
-}
-
-.qr-code {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-}
-
-.site-url {
-    font-size: 0.9em;
-    word-break: break-all;
-}
-
-.footer-bottom {
-    margin-top: 20px;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -591,16 +351,16 @@ footer {
 
     .accommodation-photo {
         width: 100%;
-        height: 182px; /* Match attraction height on mobile */
+        height: 262px; /* Match updated desktop height */
     }
 
     .card img {
-        height: 182px; /* Consistent with desktop */
+        height: 262px; /* Match updated desktop height */
     }
 
     .card {
-        min-height: 364px; /* Consistent with desktop */
-        padding: 12px; /* Adjusted padding for mobile */
+        min-height: 455px; /* Cap at previous 25% increase for mobile */
+        padding: 18px; /* Adjusted padding for mobile */
     }
 
     .hero-img {
