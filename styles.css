@@ -482,11 +482,13 @@ header nav a:hover {
 .metro-section {
     padding: 40px 20px;
     background: #f0f4f8;
+    max-width: 1200px; /* Constrain width to match other sections */
+    margin: 0 auto; /* Center the section */
 }
 
 .metro-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Maintain flexibility within constraint */
     gap: 20px;
 }
 
