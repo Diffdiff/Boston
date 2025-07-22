@@ -9,7 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to bottom, #ff8c00, #d2691e, #8b4513); /* Creative fall gradient */
+    background: linear-gradient(to bottom, #ff8c00, #d2691e, #8b4513); /* Fall gradient: orange to cinnamon to deep brown */
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scroll from animation */
@@ -23,9 +23,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Avoids interfering with clicks */
-    z-index: -1; /* Behind content */
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="rgba(255, 215, 0, 0.7)" /><path d="M50 10 L70 50 L30 50 Z" fill="rgba(144, 238, 144, 0.7)" /></svg>') repeat;
+    pointer-events: none;
+    z-index: -1;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 0 L15 5 L12 10 L15 15 L10 20 L5 15 L8 10 L5 5 Z" fill="rgba(144, 238, 144, 0.7)" transform="rotate(45 10 10)"/></svg>') repeat; /* Leaf shape */
     animation: fallLeaves 10s linear infinite;
 }
 
@@ -36,27 +36,29 @@ body::before {
 
 /* Header Styles */
 header {
-    background: url('images/fall-header.jpg') no-repeat center center; /* Replace with your image path */
-    background-size: cover; /* Ensures the image fills the header */
-    color: #fff; /* White text for contrast */
-    padding: 60px 20px; /* Increased padding to show more of the image */
+    background: url('images/fall-header.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* White text for readability */
+    padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Enhanced shadow */
-    position: relative; /* For z-index layering */
-    z-index: 1; /* Above animation */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
     margin-bottom: 10px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Subtle text shadow for readability */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    font-size: 2.5em; /* Larger title font */
 }
 
 header nav a {
-    color: #fff;
+    color: #fff; /* White links for readability */
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    font-size: 1.2em; /* Slightly larger links */
 }
 
 header nav a:hover {
@@ -65,7 +67,7 @@ header nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #ffd700, #ffa500); /* Warm golden gradient */
+    background: linear-gradient(to bottom, #ff8c00, #ff4500); /* Warm orange to red fall gradient, no yellow */
     padding: 30px 20px;
     text-align: center;
 }
@@ -150,7 +152,7 @@ header nav a:hover {
 }
 
 .location-title {
-    color: #8b4513; /* Deeper fall brown for titles */
+    color: #8b4513;
 }
 
 .attractions-section h4,
@@ -236,7 +238,7 @@ header nav a:hover {
 }
 
 .day-header {
-    background: #ffcc00;
+    background: #ff8c00; /* Adjusted to match fall gradient */
     padding: 10px;
     text-align: center;
     border-radius: 5px 5px 0 0;
