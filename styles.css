@@ -9,35 +9,54 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to bottom, #ff8c00, #d2691e, #8b4513); /* Creative fall gradient: orange to cinnamon to deep brown */
+    background: linear-gradient(to bottom, #ff8c00, #d2691e, #8b4513); /* Creative fall gradient */
     background-attachment: fixed;
-    animation: fallWind 20s ease infinite; /* Subtle wind-swept animation for fall feel */
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scroll from animation */
 }
 
-@keyframes fallWind {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 0%; }
-    100% { background-position: 0% 0%; }
+/* Falling Leaves Animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Avoids interfering with clicks */
+    z-index: -1; /* Behind content */
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="rgba(255, 215, 0, 0.7)" /><path d="M50 10 L70 50 L30 50 Z" fill="rgba(144, 238, 144, 0.7)" /></svg>') repeat;
+    animation: fallLeaves 10s linear infinite;
+}
+
+@keyframes fallLeaves {
+    0% { transform: translateY(-100vh) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
 }
 
 /* Header Styles */
 header {
-    background-color: #a52a2a; /* Deeper crimson red for fall warmth */
-    color: white;
-    padding: 20px;
+    background: url('images/fall-header.jpg') no-repeat center center; /* Replace with your image path */
+    background-size: cover; /* Ensures the image fills the header */
+    color: #fff; /* White text for contrast */
+    padding: 60px 20px; /* Increased padding to show more of the image */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Enhanced shadow */
+    position: relative; /* For z-index layering */
+    z-index: 1; /* Above animation */
 }
 
 header h1 {
     margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Subtle text shadow for readability */
 }
 
 header nav a {
-    color: white;
+    color: #fff;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 header nav a:hover {
@@ -46,7 +65,7 @@ header nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #ffd700, #ffa500); /* Golden orange gradient, softer than bright yellow */
+    background: linear-gradient(to bottom, #ffd700, #ffa500); /* Warm golden gradient */
     padding: 30px 20px;
     text-align: center;
 }
@@ -79,7 +98,7 @@ header nav a:hover {
 }
 
 .hero-img {
-    max-width: 50%; /* Balanced size */
+    max-width: 50%;
     max-height: 300px;
     height: auto;
     display: block;
@@ -122,16 +141,16 @@ header nav a:hover {
 
 .journey-location {
     margin-bottom: 50px;
-    border-bottom: 2px solid #d2691e; /* Cinnamon border for fall accent */
+    border-bottom: 2px solid #d2691e;
     padding-bottom: 20px;
-    background-color: rgba(255, 218, 185, 0.9); /* Light peach-orange tint for cohesion */
+    background-color: rgba(255, 218, 185, 0.9);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow to make sections pop */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .location-title {
-    color: #a52a2a; /* Matching header crimson */
+    color: #8b4513; /* Deeper fall brown for titles */
 }
 
 .attractions-section h4,
@@ -544,11 +563,11 @@ footer {
 
     .accommodation-photo {
         width: 100%;
-        height: 180px; /* Adjusted for mobile */
+        height: 180px;
     }
 
     .card img {
-        height: 140px; /* Smaller for mobile */
+        height: 140px;
     }
 
     .card {
@@ -556,6 +575,6 @@ footer {
     }
 
     .hero-img {
-        max-width: 80%; /* Slightly larger on mobile for visibility */
+        max-width: 80%;
     }
 }
