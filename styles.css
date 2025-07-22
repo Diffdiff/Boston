@@ -117,6 +117,7 @@ header nav a:hover {
 /* Rest of your CSS remains unchanged... */
 
 /* Journey Section */
+/* Journey Section */
 #journey {
     padding: 40px 20px;
 }
@@ -131,23 +132,35 @@ header nav a:hover {
     text-align: center;
 }
 
+.container h2 {
+    text-align: center; /* Center the "Drew and Julia's Fall New England Journey" title */
+    font-size: 1.8em; /* Slightly larger for emphasis */
+    color: #8b4513; /* Fall brown for theme */
+}
+
 .nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
+    justify-content: center; /* Center the nav grid */
 }
 
 .nav-item a {
     display: block;
-    padding: 10px;
-    background-color: #eee;
+    padding: 12px; /* Increased padding for larger feel */
+    background-color: #ffdab9; /* Light peach-orange for fall theme, replaces white */
     text-decoration: none;
-    color: #333;
-    border-radius: 5px;
+    color: #4d2600; /* Dark brown text for legibility and fall vibe, replaces black */
+    border-radius: 8px; /* Softer corners */
+    font-size: 1.3em; /* 30% larger font size (assuming base 1em) */
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
 
 .nav-item a:hover {
-    background-color: #ddd;
+    background-color: #ffb347; /* Darker orange on hover for interactivity */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* Lifted shadow */
 }
 
 .journey-location {
