@@ -91,19 +91,11 @@ header nav a:hover {
     width: 400px; /* Doubled from 200px */
     border-radius: 50%;
     border: 3px solid white;
+    transition: transform 0.3s ease; /* Smooth transition for hover */
 }
 
-.photo-caption {
-    font-style: italic;
-}
-
-.countdown-container {
-    margin: 20px 0;
-    font-size: 1.2em;
-}
-
-.countdown-timer {
-    font-weight: bold;
+.couple-photo:hover {
+    transform: scale(1.05); /* 5% zoom on hover */
 }
 
 .hero-img {
@@ -112,6 +104,11 @@ header nav a:hover {
     height: auto;
     display: block;
     margin: 20px auto;
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.hero-img:hover {
+    transform: scale(1.05); /* 5% zoom on hover */
 }
 
 /* Rest of your CSS remains unchanged... */
@@ -568,16 +565,34 @@ footer {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     header nav {
-        display: flex;
+        display: none; /* Hide nav by default on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #a52a2a; /* Matches header background for cohesion */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        padding: 10px 0;
+    }
+    header nav.active {
+        display: flex; /* Show nav when active */
         flex-direction: column;
     }
-
+    .menu-toggle {
+        display: block; /* Show toggle button */
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 10px;
+        color: #fff;
+        text-align: right;
+    }
+    /* Adjust other existing mobile styles */
     .hero {
         padding: 20px 10px;
     }
-
     .attractions-grid,
     .itinerary-grid,
     .restaurant-grid,
@@ -586,25 +601,20 @@ footer {
     .metro-grid {
         grid-template-columns: 1fr;
     }
-
     .accommodation-card {
         flex-direction: column;
     }
-
     .accommodation-photo {
         width: 100%;
-        height: 182px; /* Match attraction height on mobile */
+        height: 182px;
     }
-
     .card img {
-        height: 182px; /* Consistent with desktop */
+        height: 182px;
     }
-
     .card {
-        min-height: 364px; /* Consistent with desktop */
-        padding: 12px; /* Adjusted padding for mobile */
+        min-height: 364px;
+        padding: 12px;
     }
-
     .hero-img {
         max-width: 80%;
     }
