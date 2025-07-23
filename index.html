@@ -2,34 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curated guide for Drew and Julia's Fall New England Adventure road trip.">
     <title>Drew and Julia's Fall New England Adventure</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
-    <a href="https://diffdiff.github.io/Boston/" class="title-link">
+    <header role="banner">
+    <a href="https://diffdiff.github.io/Boston/" class="title-link" aria-label="Home page for Drew and Julia's Fall New England Adventure">
         <h1>Drew and Julia's Fall New England Adventure</h1>
     </a>
-    <nav>
-        <a href="#journey">Your Journey</a>
-        <a href="#weather">Weather</a>
-        <a href="#photo-challenge">Photo Challenge</a>
-        <a href="#packing">Packing List</a>
-        <a href="#boston-metro">Boston Metro</a>
-        <a href="#contact">Contact</a>
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="#journey" aria-label="Jump to Your Journey section">Your Journey</a>
+        <a href="#weather" aria-label="Jump to Weather section">Weather</a>
+        <a href="#photo-challenge" aria-label="Jump to Photo Challenge section">Photo Challenge</a>
+        <a href="#packing" aria-label="Jump to Packing List section">Packing List</a>
+        <a href="#boston-metro" aria-label="Jump to Boston Metro guide">Boston Metro</a>
+        <a href="#contact" aria-label="Jump to Contact section">Contact</a>
     </nav>
 </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to Drew and Julia's Fall New England Adventure</h2>
+    <section class="hero" aria-labelledby="hero-title">
+        <h2 id="hero-title">Welcome to Drew and Julia's Fall New England Adventure</h2>
         <p>Discover the best of New England with our curated road trip guide.</p>
         
         <!-- Personal Photo - Make it clickable -->
         <div class="hero-photo">
-            <a href="https://diffdiff.github.io/Boston/" class="photo-link">
-                <img src="images/drewjulia.jpg" alt="Drew and Julia" class="couple-photo">
+            <a href="https://diffdiff.github.io/Boston/" class="photo-link" aria-label="View full adventure site">
+                <img src="images/drewjulia.jpg" alt="Drew and Julia ready for their New England adventure" class="couple-photo" loading="lazy">
             </a>
             <p class="photo-caption">Ready for our amazing New England adventure! 🍂</p>
         </div>
@@ -44,13 +46,19 @@
             </div>
         </div>
         
-        <img src="images/NE.webp" alt="Map of New England" class="hero-img" />
+        <img src="images/NE.webp" alt="Static map of New England road trip route" class="hero-img" loading="lazy" />
+        
+        <!-- Interactive Map Embed -->
+        <div class="interactive-map" aria-label="Interactive Google Map of the full road trip route">
+            <iframe width="100%" height="450" frameborder="0" style="border:0" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/directions?origin=Boston&destination=Boston&waypoints=Salem|Portland+ME|Bar+Harbor|North+Conway|Mount+Washington|Stowe+VT&mode=driving" allowfullscreen loading="lazy"></iframe>
+            <p class="map-caption">Interactive route map: Boston → Salem → Portland ME → Bar Harbor (Acadia) → North Conway (White Mountains) → Mount Washington → Stowe VT → Boston. (Add your Google API key if needed for full functionality.)</p>
+        </div>
     </section>
 
     <!-- Your New England Journey -->
-    <section id="journey">
+    <section id="journey" role="main" aria-labelledby="journey-title">
         <div class="container">
-            <h2>Drew and Julia's Fall New England Journey</h2>
+            <h2 id="journey-title">Drew and Julia's Fall New England Journey</h2>
             
             <!-- Journey Navigation -->
             <div class="journey-nav">
@@ -76,36 +84,36 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/freedom-trail.jpg" alt="Freedom Trail">
+                            <img src="images/freedom-trail.jpg" alt="Freedom Trail in Boston" loading="lazy">
                             <h3>Freedom Trail</h3>
                             <p>Walk through history on Boston's famous trail.</p>
                             <div class="card-links">
-                                <a href="https://www.thefreedomtrail.org/" target="_blank" class="card-link">Official Website</a>
-                                <a href="https://www.youtube.com/watch?v=pdJx_nMi5XM" target="_blank" class="card-link">Watch Video</a>
+                                <a href="https://www.thefreedomtrail.org/" target="_blank" class="card-link" aria-label="Official Freedom Trail website">Official Website</a>
+                                <a href="https://www.youtube.com/watch?v=pdJx_nMi5XM" target="_blank" class="card-link" aria-label="Watch Freedom Trail video">Watch Video</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/boston-skyline.jpg" alt="Boston Skyline">
+                            <img src="images/boston-skyline.jpg" alt="Boston Skyline view" loading="lazy">
                             <h3>Boston Skyline</h3>
                             <p>Experience stunning views of the city skyline.</p>
                             <div class="card-links">
-                                <a href="https://www.therooftopguide.com/rooftop-bars-in-boston.html" target="_blank" class="card-link">Rooftop Bars</a>
+                                <a href="https://www.therooftopguide.com/rooftop-bars-in-boston.html" target="_blank" class="card-link" aria-label="Rooftop bars in Boston">Rooftop Bars</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/fenway.jpg" alt="Fenway Park">
+                            <img src="images/fenway.jpg" alt="Fenway Park stadium" loading="lazy">
                             <h3>Fenway Park</h3>
                             <p>Home of the Boston Red Sox and America's most beloved ballpark.</p>
                             <div class="card-links">
-                                <a href="https://thefenway.com/locations/fenway-park/" target="_blank" class="card-link">Visit Fenway</a>
+                                <a href="https://thefenway.com/locations/fenway-park/" target="_blank" class="card-link" aria-label="Visit Fenway Park">Visit Fenway</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/bostonharbor.jpg" alt="Boston Harbor">
+                            <img src="images/bostonharbor.jpg" alt="Boston Harbor waterfront" loading="lazy">
                             <h3>Boston Harbor</h3>
                             <p>Take a scenic harbor cruise or explore the waterfront attractions.</p>
                             <div class="card-links">
-                                <a href="https://www.bostonharbor.com/" target="_blank" class="card-link">Boston Harbor</a>
+                                <a href="https://www.bostonharbor.com/" target="_blank" class="card-link" aria-label="Boston Harbor information">Boston Harbor</a>
                             </div>
                         </div>
                     </div>
@@ -190,12 +198,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/reverebeach.jpg" alt="Revere Beach Airbnb" class="accommodation-photo">
+                        <img src="images/reverebeach.jpg" alt="Revere Beach Airbnb beachfront view" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>Revere Beach Airbnb</h5>
                             <p>Beachfront location with easy Blue Line access to downtown Boston. Perfect base for exploring!</p>
                             <div class="card-links">
-                                <a href="https://reverebeach.com/" target="_blank" class="card-link">View Revere Beach</a>
+                                <a href="https://reverebeach.com/" target="_blank" class="card-link" aria-label="View Revere Beach information">View Revere Beach</a>
                             </div>
                         </div>
                     </div>
@@ -211,29 +219,29 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/salemwitchmuseum.jpg" alt="Salem Witch Museum">
+                            <img src="images/salemwitchmuseum.jpg" alt="Salem Witch Museum exterior" loading="lazy">
                             <h3>Salem Witch Museum</h3>
                             <p>Learn about the infamous Salem Witch Trials of 1692.</p>
                             <div class="card-links">
-                                <a href="https://salemwitchmuseum.com/" target="_blank" class="card-link">Visit Museum</a>
+                                <a href="https://salemwitchmuseum.com/" target="_blank" class="card-link" aria-label="Visit Salem Witch Museum">Visit Museum</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/salemwitchhouse.jpg" alt="The Witch House">
+                            <img src="images/salemwitchhouse.jpg" alt="The Witch House historic building" loading="lazy">
                             <h3>The Witch House</h3>
                             <p>Tour the home of Judge Jonathan Corwin from the famous witch trials.</p>
                             <div class="card-links">
-                                <a href="https://www.thewitchhouse.org/" target="_blank" class="card-link">Tour House</a>
+                                <a href="https://www.thewitchhouse.org/" target="_blank" class="card-link" aria-label="Tour The Witch House">Tour House</a>
                             </div>
                         </div>
                         <!-- Salem Top Attractions - Add this as a new card -->
                         <div class="card">
-                            <img src="images/salemghost.jpg" alt="Salem Ghost Tour">
+                            <img src="images/salemghost.jpg" alt="Spooky Salem Ghost Tour at night" loading="lazy">
                             <h3>Salem Ghost Tours</h3>
                             <p>Spooky evening walking tours through Salem's most haunted locations.</p>
                             <div class="card-links">
-                                <a href="https://www.hauntedhistorytrail.com/" target="_blank" class="card-link">Haunted History Trail</a>
-                                <a href="https://www.salemghosttours.com/" target="_blank" class="card-link">Salem Ghost Tours</a>
+                                <a href="https://www.hauntedhistorytrail.com/" target="_blank" class="card-link" aria-label="Haunted History Trail information">Haunted History Trail</a>
+                                <a href="https://www.salemghosttours.com/" target="_blank" class="card-link" aria-label="Salem Ghost Tours website">Salem Ghost Tours</a>
                             </div>
                         </div>
                     </div>
@@ -288,12 +296,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/reverebeach.jpg" alt="Revere Beach Airbnb" class="accommodation-photo">
+                        <img src="images/reverebeach.jpg" alt="Revere Beach Airbnb beachfront view" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>Revere Beach Airbnb</h5>
                             <p>Returning to our beachfront base after a full day exploring Salem's spooky sites!</p>
                             <div class="card-links">
-                                <a href="https://reverebeach.com/" target="_blank" class="card-link">View Revere Beach</a>
+                                <a href="https://reverebeach.com/" target="_blank" class="card-link" aria-label="View Revere Beach information">View Revere Beach</a>
                             </div>
                         </div>
                     </div>
@@ -301,7 +309,7 @@
             </div>
 
             <!-- Coast of Maine Day 4 -->
-            <div id="coast-maine" class="journey-location">
+            <div id="maine" class="journey-location">
                 <h3 class="location-title">Coast of Maine to Acadia (Oct 14) - Drive to The Moorings</h3>
                 
                 <!-- Attractions -->
@@ -309,43 +317,43 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/portsmouth.jpg" alt="Portsmouth, NH">
+                            <img src="images/portsmouth.jpg" alt="Portsmouth, NH historic seaport" loading="lazy">
                             <h3>Portsmouth, NH</h3>
                             <p>Historic seaport town with charming downtown area.</p>
                             <div class="card-links">
-                                <a href="https://www.goportsmouthnh.com/" target="_blank" class="card-link">Visit Portsmouth</a>
+                                <a href="https://www.goportsmouthnh.com/" target="_blank" class="card-link" aria-label="Visit Portsmouth NH">Visit Portsmouth</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/sigsauer.jpg" alt="Sig Sauer Factory">
+                            <img src="images/sigsauer.jpg" alt="Sig Sauer Factory in NH" loading="lazy">
                             <h3>Sig Sauer Factory</h3>
                             <p>Visit the renowned firearms manufacturer in Epping, NH.</p>
                             <div class="card-links">
-                                <a href="https://www.sigsauer.com/" target="_blank" class="card-link">Sig Sauer</a>
+                                <a href="https://www.sigsauer.com/" target="_blank" class="card-link" aria-label="Sig Sauer website">Sig Sauer</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/york.jpg" alt="York, Maine">
+                            <img src="images/york.jpg" alt="York, Maine coastal town" loading="lazy">
                             <h3>York, Maine</h3>
                             <p>Beautiful coastal town with beaches and historic sites.</p>
                             <div class="card-links">
-                                <a href="https://seacoastlately.com/towns/york-maine/" target="_blank" class="card-link">Explore York</a>
+                                <a href="https://seacoastlately.com/towns/york-maine/" target="_blank" class="card-link" aria-label="Explore York Maine">Explore York</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/kennebunkport.jpg" alt="Kennebunkport, ME">
+                            <img src="images/kennebunkport.jpg" alt="Kennebunkport, ME coastal views" loading="lazy">
                             <h3>Kennebunkport, ME</h3>
                             <p>Charming coastal town with Dock Square and Ocean Avenue views.</p>
                             <div class="card-links">
-                                <a href="https://visitkennebunkport.com/" target="_blank" class="card-link">Visit Kennebunkport</a>
+                                <a href="https://visitkennebunkport.com/" target="_blank" class="card-link" aria-label="Visit Kennebunkport">Visit Kennebunkport</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/portlandwharf.jpg" alt="Portland, ME">
+                            <img src="images/portlandwharf.jpg" alt="Portland, ME Old Port district" loading="lazy">
                             <h3>Portland, ME</h3>
                             <p>Brief stop in Maine's foodie capital and Old Port district.</p>
                             <div class="card-links">
-                                <a href="https://www.visitportland.com/" target="_blank" class="card-link">Visit Portland</a>
+                                <a href="https://www.visitportland.com/" target="_blank" class="card-link" aria-label="Visit Portland ME">Visit Portland</a>
                             </div>
                         </div>
                     </div>
@@ -403,12 +411,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/moorings.jpg" alt="The Moorings Inn" class="accommodation-photo">
+                        <img src="images/moorings.jpg" alt="The Moorings Inn waterfront view" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>The Moorings Inn, Manset</h5>
                             <p>Waterfront inn just south of Southwest Harbor. Perfect location for Acadia exploration and sunrise viewing!</p>
                             <div class="card-links">
-                                <a href="https://www.mooringsinn.com/" target="_blank" class="card-link">Visit Website</a>
+                                <a href="https://www.mooringsinn.com/" target="_blank" class="card-link" aria-label="Visit The Moorings Inn website">Visit Website</a>
                             </div>
                         </div>
                     </div>
@@ -425,35 +433,35 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/cadillacmountain.jpg" alt="Cadillac Mountain">
+                            <img src="images/cadillacmountain.jpg" alt="Cadillac Mountain panoramic view" loading="lazy">
                             <h3>Cadillac Mountain</h3>
                             <p>First place to see sunrise in the US with panoramic views.</p>
                             <div class="card-links">
-                                <a href="https://www.nps.gov/acad/planyourvisit/cadillac-mountain.htm" target="_blank" class="card-link">Park Service Info</a>
+                                <a href="https://www.nps.gov/acad/planyourvisit/cadillac-mountain.htm" target="_blank" class="card-link" aria-label="Cadillac Mountain park info">Park Service Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/jordanpond.jpg" alt="Jordan Pond">
+                            <img src="images/jordanpond.jpg" alt="Jordan Pond with Bubble Mountains" loading="lazy">
                             <h3>Jordan Pond</h3>
                             <p>Crystal clear lake with iconic Bubble Mountains backdrop.</p>
                             <div class="card-links">
-                                <a href="https://www.nps.gov/acad/planyourvisit/jordan-pond.htm" target="_blank" class="card-link">Jordan Pond Trail</a>
+                                <a href="https://www.nps.gov/acad/planyourvisit/jordan-pond.htm" target="_blank" class="card-link" aria-label="Jordan Pond trail info">Jordan Pond Trail</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/thunderhole.jpg" alt="Thunder Hole">
+                            <img src="images/thunderhole.jpg" alt="Thunder Hole rock formation" loading="lazy">
                             <h3>Thunder Hole</h3>
                             <p>Natural rock formation creating thunderous ocean sounds.</p>
                             <div class="card-links">
-                                <a href="https://www.nps.gov/places/thunder-hole.htm" target="_blank" class="card-link">Thunder Hole Info</a>
+                                <a href="https://www.nps.gov/places/thunder-hole.htm" target="_blank" class="card-link" aria-label="Thunder Hole information">Thunder Hole Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/oceanpath.jpg" alt="Ocean Path">
+                            <img src="images/oceanpath.jpg" alt="Ocean Path coastal walk" loading="lazy">
                             <h3>Ocean Path</h3>
                             <p>Easy coastal walk with stunning Atlantic Ocean views.</p>
                             <div class="card-links">
-                                <a href="https://www.nps.gov/thingstodo/hike-ocean-path-trail.htm" target="_blank" class="card-link">Trail Guide</a>
+                                <a href="https://www.nps.gov/thingstodo/hike-ocean-path-trail.htm" target="_blank" class="card-link" aria-label="Ocean Path trail guide">Trail Guide</a>
                             </div>
                         </div>
                     </div>
@@ -509,12 +517,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/moorings.jpg" alt="The Moorings Inn" class="accommodation-photo">
+                        <img src="images/moorings.jpg" alt="The Moorings Inn waterfront view" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>The Moorings Inn, Manset (Night 2)</h5>
                             <p>Second night at our waterfront inn after a full day exploring Acadia. Wake up refreshed for the White Mountains drive tomorrow!</p>
                             <div class="card-links">
-                                <a href="https://www.mooringsinn.com/" target="_blank" class="card-link">Visit Website</a>
+                                <a href="https://www.mooringsinn.com/" target="_blank" class="card-link" aria-label="Visit The Moorings Inn website">Visit Website</a>
                             </div>
                         </div>
                     </div>
@@ -530,38 +538,38 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/sabbadayfalls.jpg" alt="Sabbaday Falls">
+                            <img src="images/sabbadayfalls.jpg" alt="Sabbaday Falls waterfall gorge" loading="lazy">
                             <h3>Sabbaday Falls</h3>
                             <p>Easy 0.7-mile walk to a stunning gorge waterfall.</p>
                             <div class="card-links">
-                                <a href="https://www.visitwhitemountains.com/listing/sabbaday-falls/662/" target="_blank" class="card-link">Trail Info</a>
+                                <a href="https://www.visitwhitemountains.com/listing/sabbaday-falls/662/" target="_blank" class="card-link" aria-label="Sabbaday Falls trail info">Trail Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/cathedralledge.jpg" alt="Cathedral Ledge">
+                            <img src="images/cathedralledge.jpg" alt="Cathedral Ledge viewpoint" loading="lazy">
                             <h3>Cathedral Ledge</h3>
                             <p>Drive-up viewpoint with sweeping views of Saco River Valley.</p>
                             <div class="card-links">
-                                <a href="https://www.nhstateparks.org/visit/state-parks/cathedral-ledge-state-park" target="_blank" class="card-link">State Park Info</a>
+                                <a href="https://www.nhstateparks.org/visit/state-parks/cathedral-ledge-state-park" target="_blank" class="card-link" aria-label="Cathedral Ledge state park info">State Park Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/tuckermanbrewing.jpg" alt="Tuckerman Brewing Company">
+                            <img src="images/tuckermanbrewing.jpg" alt="Tuckerman Brewing Company exterior" loading="lazy">
                             <h3>Tuckerman Brewing Company</h3>
                             <p>Local brewery with beer flights and live music in North Conway.</p>
                             <div class="card-links">
-                                <a href="https://tuckermanbrewing.com/" target="_blank" class="card-link">Official Website</a>
-                                <a href="https://tuckermanbrewing.com/events/" target="_blank" class="card-link">Live Music Schedule</a>
+                                <a href="https://tuckermanbrewing.com/" target="_blank" class="card-link" aria-label="Tuckerman Brewing official website">Official Website</a>
+                                <a href="https://tuckermanbrewing.com/events/" target="_blank" class="card-link" aria-label="Tuckerman Brewing live music schedule">Live Music Schedule</a>
                             </div>
                         </div>
                         <!-- Add this as a new card in the White Mountains attractions section -->
                         <div class="card">
-                            <img src="images/acadiawest.jpg" alt="Acadia West Side Trails">
+                            <img src="images/acadiawest.jpg" alt="Acadia West Side Trails scenic path" loading="lazy">
                             <h3>Acadia West Side Trails</h3>
                             <p>Easy morning walks: Wonderland Trail or Ship Harbor Trail - both short, scenic, and peaceful.</p>
                             <div class="card-links">
-                                <a href="https://www.nps.gov/thingstodo/hike-wonderland-trail.htm" target="_blank" class="card-link">Wonderland Trail</a>
-                                <a href="https://www.nps.gov/thingstodo/hike-ship-harbor-trail.htm" target="_blank" class="card-link">Ship Harbor Trail</a>
+                                <a href="https://www.nps.gov/thingstodo/hike-wonderland-trail.htm" target="_blank" class="card-link" aria-label="Wonderland Trail info">Wonderland Trail</a>
+                                <a href="https://www.nps.gov/thingstodo/hike-ship-harbor-trail.htm" target="_blank" class="card-link" aria-label="Ship Harbor Trail info">Ship Harbor Trail</a>
                             </div>
                         </div>
                     </div>
@@ -617,12 +625,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/tuckaway.jpg" alt="Tuckaway Stays" class="accommodation-photo">
+                        <img src="images/tuckaway.jpg" alt="Tuckaway Stays mountain retreat" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>Tuckaway Stays, North Conway</h5>
                             <p>Cozy mountain retreat in the heart of the White Mountains. Perfect base for exploring Mount Washington and surrounding attractions for 2 nights!</p>
                             <div class="card-links">
-                                <a href="https://www.tuckawaystays.com/" target="_blank" class="card-link">Visit Website</a>
+                                <a href="https://www.tuckawaystays.com/" target="_blank" class="card-link" aria-label="Visit Tuckaway Stays website">Visit Website</a>
                             </div>
                         </div>
                     </div>
@@ -638,36 +646,36 @@
                     <h4>Top Attractions</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/flumegorge.jpg" alt="Flume Gorge">
+                            <img src="images/flumegorge.jpg" alt="Flume Gorge boardwalk and waterfalls" loading="lazy">
                             <h3>Flume Gorge</h3>
                             <p>2-mile boardwalk loop through stunning granite gorge with waterfalls.</p>
                             <div class="card-links">
-                                <a href="https://www.nhstateparks.org/visit/state-parks/flume-gorge" target="_blank" class="card-link">State Park Info</a>
+                                <a href="https://www.nhstateparks.org/visit/state-parks/flume-gorge" target="_blank" class="card-link" aria-label="Flume Gorge state park info">State Park Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/franconia.jpg" alt="Franconia Falls">
+                            <img src="images/franconia.jpg" alt="Franconia Falls natural slides" loading="lazy">
                             <h3>Franconia Falls</h3>
                             <p>Easy 1.6-mile walk to natural granite water slides and swimming holes.</p>
                             <div class="card-links">
-                                <a href="https://blog.nhstateparks.org/the-waterfalls-of-franconia/" target="_blank" class="card-link">Trail Guide</a>
+                                <a href="https://blog.nhstateparks.org/the-waterfalls-of-franconia/" target="_blank" class="card-link" aria-label="Franconia Falls trail guide">Trail Guide</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/echolake.jpg" alt="Echo Lake">
+                            <img src="images/echolake.jpg" alt="Echo Lake with mountain reflections" loading="lazy">
                             <h3>Echo Lake</h3>
                             <p>Drive-up lake with easy 0.6-mile loop trail and stunning mountain reflections.</p>
                             <div class="card-links">
-                                <a href="https://www.nhstateparks.org/find-parks-trails/echo-lake-state-park" target="_blank" class="card-link">State Park Info</a>
+                                <a href="https://www.nhstateparks.org/find-parks-trails/echo-lake-state-park" target="_blank" class="card-link" aria-label="Echo Lake state park info">State Park Info</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/mtwashingtonautord.jpg" alt="Mount Washington Auto Road">
+                            <img src="images/mtwashingtonautord.jpg" alt="Mount Washington Auto Road scenic drive" loading="lazy">
                             <h3>Mount Washington Auto Road</h3>
                             <p>Drive to the summit! 8-mile scenic auto road to the top of Mount Washington.</p>
                             <div class="card-links">
-                                <a href="https://www.mtwashingtonautoroad.com/" target="_blank" class="card-link">Auto Road Info</a>
-                                <a href="https://www.mountwashington.org/" target="_blank" class="card-link">Weather Observatory</a>
+                                <a href="https://www.mtwashingtonautoroad.com/" target="_blank" class="card-link" aria-label="Mount Washington Auto Road info">Auto Road Info</a>
+                                <a href="https://www.mountwashington.org/" target="_blank" class="card-link" aria-label="Mount Washington weather observatory">Weather Observatory</a>
                             </div>
                         </div>
                     </div>
@@ -719,12 +727,12 @@
                 <div class="accommodation-section">
                     <h4>🏨 Where we're staying</h4>
                     <div class="accommodation-card">
-                        <img src="images/tuckaway.jpg" alt="Tuckaway Stays" class="accommodation-photo">
+                        <img src="images/tuckaway.jpg" alt="Tuckaway Stays mountain retreat" class="accommodation-photo" loading="lazy">
                         <div class="accommodation-info">
                             <h5>Tuckaway Stays, North Conway (Night 2)</h5>
                             <p>Second night at our cozy mountain retreat. No need to pack up - just relax and enjoy another evening in the White Mountains!</p>
                             <div class="card-links">
-                                <a href="https://www.tuckawaystays.com/" target="_blank" class="card-link">Visit Website</a>
+                                <a href="https://www.tuckawaystays.com/" target="_blank" class="card-link" aria-label="Visit Tuckaway Stays website">Visit Website</a>
                             </div>
                         </div>
                     </div>
@@ -740,35 +748,35 @@
                     <h4>Scenic Drive Highlights</h4>
                     <div class="attractions-grid">
                         <div class="card">
-                            <img src="images/vermontdrive.jpg" alt="Vermont Scenic Drive">
+                            <img src="images/vermontdrive.jpg" alt="Vermont scenic drive with fall foliage" loading="lazy">
                             <h3>Vermont Scenic Drive</h3>
                             <p>Beautiful fall foliage route through Crawford Notch to Woodstock/Stowe.</p>
                             <div class="card-links">
-                                <a href="https://www.vermont.com/fall-foliage/" target="_blank" class="card-link">Foliage Reports</a>
+                                <a href="https://www.vermont.com/fall-foliage/" target="_blank" class="card-link" aria-label="Vermont foliage reports">Foliage Reports</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/litchfield.jpg" alt="Litchfield Hills, CT">
+                            <img src="images/litchfield.jpg" alt="Litchfield Hills, CT countryside" loading="lazy">
                             <h3>Litchfield Hills, CT</h3>
                             <p>Beautiful countryside drive through Connecticut's scenic hills.</p>
                             <div class="card-links">
-                                <a href="https://www.visitlitchfieldhills.com/" target="_blank" class="card-link">Visit Litchfield Hills</a>
+                                <a href="https://www.visitlitchfieldhills.com/" target="_blank" class="card-link" aria-label="Visit Litchfield Hills">Visit Litchfield Hills</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/rhodeislandcoast.jpg" alt="Rhode Island Coastline">
+                            <img src="images/rhodeislandcoast.jpg" alt="Rhode Island coastline views" loading="lazy">
                             <h3>Rhode Island Coastline</h3>
                             <p>Optional stops in Newport or Providence for coastal views.</p>
                             <div class="card-links">
-                                <a href="https://www.discovernewport.org/" target="_blank" class="card-link">Discover Newport</a>
+                                <a href="https://www.discovernewport.org/" target="_blank" class="card-link" aria-label="Discover Newport RI">Discover Newport</a>
                             </div>
                         </div>
                         <div class="card">
-                            <img src="images/bostonnorthend.jpg" alt="Boston North End">
+                            <img src="images/bostonnorthend.jpg" alt="Boston North End Italian district" loading="lazy">
                             <h3>Boston North End</h3>
                             <p>Perfect ending with Italian dinner in historic North End.</p>
                             <div class="card-links">
-                                <a href="https://www.northendboston.com/" target="_blank" class="card-link">North End Guide</a>
+                                <a href="https://www.northendboston.com/" target="_blank" class="card-link" aria-label="North End Boston guide">North End Guide</a>
                             </div>
                         </div>
                     </div>
@@ -845,9 +853,9 @@
 
 
     <!-- Weather Section -->
-    <section id="weather">
+    <section id="weather" aria-labelledby="weather-title">
     <div class="container">
-        <h2>🌤️ Weather Information</h2>
+        <h2 id="weather-title">🌤️ Weather Information</h2>
         
         <!-- Weather Widget -->
         <div class="weather-widget-container">
@@ -858,7 +866,7 @@
                 </div>
                 <div class="weather-content">
                     <p class="weather-description">Get current conditions and 7-day forecast for Boston</p>
-                    <a href="https://weather.com/weather/today/l/Boston+MA+USMA0046:1:US" target="_blank" class="weather-btn boston-btn">
+                    <a href="https://weather.com/weather/today/l/Boston+MA+USMA0046:1:US" target="_blank" class="weather-btn boston-btn" aria-label="View Boston weather on Weather.com">
                         View Boston Weather
                     </a>
                 </div>
@@ -871,7 +879,7 @@
                 </div>
                 <div class="weather-content">
                     <p class="weather-description">Mountain conditions for Mount Washington area</p>
-                    <a href="https://weather.com/weather/today/l/Mount+Washington+NH+03589:4:US" target="_blank" class="weather-btn mountains-btn">
+                    <a href="https://weather.com/weather/today/l/Mount+Washington+NH+03589:4:US" target="_blank" class="weather-btn mountains-btn" aria-label="View White Mountains weather on Weather.com">
                         View Mountain Weather
                     </a>
                 </div>
@@ -888,7 +896,7 @@
                         <h4>Mount Washington Summit</h4>
                     </div>
                     <p>Real-time conditions from the highest peak in New England</p>
-                    <a href="https://www.mountwashington.org/weather/current-summit-conditions/" target="_blank" class="resource-btn summit-btn">
+                    <a href="https://www.mountwashington.org/weather/current-summit-conditions/" target="_blank" class="resource-btn summit-btn" aria-label="View Mount Washington summit conditions">
                         View Summit Conditions
                     </a>
                 </div>
@@ -899,7 +907,7 @@
                         <h4>Fall Foliage Tracker</h4>
                     </div>
                     <p>Track peak foliage timing across New England states</p>
-                    <a href="https://www.foliagenetwork.com/index.php/foliage-reports/foliage-reports-northeast-us/current-season-northeast-us" target="_blank" class="resource-btn foliage-btn">
+                    <a href="https://www.foliagenetwork.com/index.php/foliage-reports/foliage-reports-northeast-us/current-season-northeast-us" target="_blank" class="resource-btn foliage-btn" aria-label="Track fall foliage">
                         Track Foliage
                     </a>
                 </div>
@@ -914,9 +922,9 @@
 </script>
 
     <!-- Photo Challenge Section -->
-    <section id="photo-challenge">
+    <section id="photo-challenge" aria-labelledby="photo-challenge-title">
         <div class="container">
-            <h2>📸 Photo Challenge List</h2>
+            <h2 id="photo-challenge-title">📸 Photo Challenge List</h2>
             <p>Capture these memorable moments during your New England adventure!</p>
             <div class="challenge-grid">
                 <div class="challenge-item">
@@ -956,9 +964,9 @@
     </section>
 
     <!-- Packing List Section -->
-    <section id="packing">
+    <section id="packing" aria-labelledby="packing-title">
     <div class="container">
-        <h2>🎒 New England Fall Road Trip Packing List</h2>
+        <h2 id="packing-title">🎒 New England Fall Road Trip Packing List</h2>
         
         <div class="packing-grid">
             <div class="packing-category">
@@ -1010,8 +1018,8 @@
 </section>
 
 <!-- Boston Metro Guide - Bottom of page -->
-<div id="boston-metro" class="metro-section">
-    <h4>Boston Metro Guide</h4> <!-- Remove the 🚇 emoji from here -->
+<div id="boston-metro" class="metro-section" aria-labelledby="metro-title">
+    <h4 id="metro-title">Boston Metro Guide</h4> <!-- Remove the 🚇 emoji from here -->
     <div class="metro-grid">
         <div class="metro-card">
             <h5>🔵 Blue Line</h5>
@@ -1023,7 +1031,7 @@
                 <li><strong>Aquarium</strong> - New England Aquarium, Harbor</li>
             </ul>
             <div class="metro-links">
-                <a href="https://www.mbta.com/schedules/Blue" target="_blank" class="metro-link">Blue Line Schedule</a>
+                <a href="https://www.mbta.com/schedules/Blue" target="_blank" class="metro-link" aria-label="Blue Line schedule">Blue Line Schedule</a>
             </div>
         </div>
         
@@ -1036,7 +1044,7 @@
                 <li><strong>North Station</strong> - TD Garden, North End access</li>
             </ul>
             <div class="metro-links">
-                <a href="https://www.mbta.com/schedules/Orange" target="_blank" class="metro-link">Orange Line Schedule</a>
+                <a href="https://www.mbta.com/schedules/Orange" target="_blank" class="metro-link" aria-label="Orange Line schedule">Orange Line Schedule</a>
             </div>
         </div>
         
@@ -1050,7 +1058,7 @@
                 <li><strong>Kenmore</strong> - Fenway Park access</li>
             </ul>
             <div class="metro-links">
-                <a href="https://www.mbta.com/schedules/Green" target="_blank" class="metro-link">Green Line Schedule</a>
+                <a href="https://www.mbta.com/schedules/Green" target="_blank" class="metro-link" aria-label="Green Line schedule">Green Line Schedule</a>
             </div>
         </div>
         
@@ -1064,7 +1072,7 @@
                 <li><strong>South Station</strong> - Transportation hub</li>
             </ul>
             <div class="metro-links">
-                <a href="https://www.mbta.com/schedules/Red" target="_blank" class="metro-link">Red Line Schedule</a>
+                <a href="https://www.mbta.com/schedules/Red" target="_blank" class="metro-link" aria-label="Red Line schedule">Red Line Schedule</a>
             </div>
         </div>
     </div>
@@ -1078,14 +1086,14 @@
             <li><strong>Walking Distance:</strong> Many downtown attractions are walkable from metro stops</li>
         </ul>
         <div class="metro-links">
-            <a href="https://www.mbta.com/trip-planner" target="_blank" class="metro-link">Trip Planner</a>
-            <a href="https://www.mbta.com/fares" target="_blank" class="metro-link">Fares & Passes</a>
+            <a href="https://www.mbta.com/trip-planner" target="_blank" class="metro-link" aria-label="MBTA trip planner">Trip Planner</a>
+            <a href="https://www.mbta.com/fares" target="_blank" class="metro-link" aria-label="MBTA fares and passes">Fares & Passes</a>
         </div>
     </div>
 </div>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" role="contentinfo" aria-label="Footer with contact and sharing information">
         <div class="container">
             <h2>Contact & Connect</h2>
             <div class="footer-content">
@@ -1098,14 +1106,14 @@
                     <h4>🔗 Share This Site</h4>
                     <p>Scan to view on mobile or share with friends!</p>
                     <div class="qr-container">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://diffdiff.github.io/Boston/" alt="QR Code for Drew and Julia's Fall New England Adventure Website" class="qr-code">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://diffdiff.github.io/Boston/" alt="QR Code to access Drew and Julia's Fall New England Adventure website" class="qr-code" loading="lazy">
                     </div>
                     <p class="site-url">https://diffdiff.github.io/Boston/</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Drew and Julia's Fall New England Adventure. Safe travels! 🍂</p>
+                <p>© 2025 Drew and Julia's Fall New England Adventure. Safe travels! 🍂</p>
             </div>
         </div>
     </footer>
