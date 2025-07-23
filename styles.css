@@ -5,11 +5,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --fall-orange: #ff8c00;
+    --fall-red: #ff4500;
+    --fall-brown: #8b4513;
+    --fall-light: #ffdab9;
+    --text-dark: #222; /* Darkened for better contrast */
+    --shadow-soft: rgba(0,0,0,0.1);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to bottom, #ff8c00, #d2691e, #8b4513); /* Fall gradient */
+    color: var(--text-dark);
+    background: linear-gradient(to bottom, var(--fall-orange), #d2691e, var(--fall-brown)); /* Fall gradient */
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden; /* Prevent horizontal scroll from animation */
@@ -25,8 +34,10 @@ body::before {
     height: 100%;
     pointer-events: none;
     z-index: -1;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255, 165, 0, 0.7)"><path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10 -4.48 10 -10c0 -5.52 -4.48 -10 -10 -10zm0 18c-4.41 0 -8 -3.59 -8 -8c0 -4.41 3.59 -8 8 -8c4.41 0 8 3.59 8 8c0 4.41 -3.59 8 -8 8z"/><path d="M12 6v12" stroke="rgba(139, 69, 19, 0.5)" stroke-width="2"/><path d="M6 12h12" stroke="rgba(139, 69, 19, 0.5)" stroke-width="2"/></svg>') repeat; /* More realistic leaf-like shape with veins */
-    animation: fallLeaves 10s linear infinite;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255, 165, 0, 0.5)"><path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10 -4.48 10 -10c0 -5.52 -4.48 -10 -10 -10zm0 18c-4.41 0 -8 -3.59 -8 -8c0 -4.41 3.59 -8 8 -8c4.41 0 8 3.59 8 8c0 4.41 -3.59 8 -8 8z"/><path d="M12 6v12" stroke="rgba(139, 69, 19, 0.3)" stroke-width="1"/><path d="M6 12h12" stroke="rgba(139, 69, 19, 0.3)" stroke-width="1"/></svg>') repeat; /* Simplified SVG for performance */
+    background-size: 50px; /* Smaller leaves for less rendering load */
+    will-change: transform; /* Optimize animation */
+    animation: fallLeaves 15s linear infinite; /* Slowed for smoothness */
 }
 
 @keyframes fallLeaves {
@@ -34,7 +45,17 @@ body::before {
     100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Header Styles */
+/* Section Transitions */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Slightly smoother */
+}
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Header Styles */
 header {
     background: url('images/fall-header.jpg') no-repeat center center;
@@ -42,7 +63,7 @@ header {
     color: #fff;
     padding: 60px 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 6px var(--shadow-soft);
     position: relative;
     z-index: 1;
 }
@@ -59,6 +80,12 @@ header .title-link {
     color: #fff; /* Ensures the link text is white */
 }
 
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 header nav a {
     color: #fff;
     margin: 0 15px;
@@ -66,15 +93,27 @@ header nav a {
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     font-size: 1.2em;
+    transition: color 0.3s;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+header nav a:hover,
+header nav a:focus {
+    color: var(--fall-light);
+    outline: 2px solid #fff; /* Accessibility focus */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #ff8c00, #ff4500);
+    background: linear-gradient(to bottom, var(--fall-orange), var(--fall-red));
     padding: 30px 20px;
     text-align: center;
 }
@@ -94,7 +133,8 @@ header nav a:hover {
     transition: transform 0.3s ease; /* Smooth transition for hover */
 }
 
-.couple-photo:hover {
+.couple-photo:hover,
+.couple-photo:focus {
     transform: scale(1.05); /* 5% zoom on hover */
 }
 
@@ -107,14 +147,34 @@ header nav a:hover {
     transition: transform 0.3s ease; /* Smooth transition for hover */
 }
 
-.hero-img:hover {
+.hero-img:hover,
+.hero-img:focus {
     transform: scale(1.05); /* 5% zoom on hover */
 }
 
-/* Rest of your CSS remains unchanged... */
+/* Interactive Map Styles (New) */
+.interactive-map {
+    margin: 20px auto;
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--shadow-soft);
+}
 
-/* Journey Section */
-/* Journey Section */
+.interactive-map iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.map-caption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
 /* Journey Section */
 #journey {
     padding: 40px 20px;
@@ -133,7 +193,7 @@ header nav a:hover {
 .container h2 {
     text-align: center;
     font-size: 1.8em;
-    color: #8b4513;
+    color: var(--fall-brown);
 }
 
 .nav-grid {
@@ -146,19 +206,22 @@ header nav a:hover {
 .nav-item a {
     display: block;
     padding: 12px;
-    background-color: #ffdab9;
+    background-color: var(--fall-light);
     text-decoration: none;
     color: #4d2600;
     border-radius: 8px;
     font-size: 1.3em;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px var(--shadow-soft);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-.nav-item a:hover {
+.nav-item a:hover,
+.nav-item a:focus {
     background-color: #ffb347;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 6px var(--shadow-soft);
+    transform: translateY(-2px); /* Subtle lift */
+    outline: 2px solid #4d2600;
 }
 
 .journey-location {
@@ -168,11 +231,11 @@ header nav a:hover {
     background-color: rgba(255, 218, 185, 0.9);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-soft);
 }
 
 .location-title {
-    color: #8b4513;
+    color: var(--fall-brown);
 }
 
 .attractions-section h4,
@@ -180,7 +243,7 @@ header nav a:hover {
 .restaurant-section h4,
 .accommodation-section h4 {
     margin: 20px 0 10px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 .attractions-section {
@@ -203,7 +266,14 @@ header nav a:hover {
     display: flex;
     flex-direction: column;
     min-height: 455px; /* Increased by 25% */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-soft);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: 0 4px 8px var(--shadow-soft);
+    transform: translateY(-4px);
 }
 
 .card img {
@@ -238,10 +308,13 @@ header nav a:hover {
     color: #007bff;
     text-decoration: none;
     font-size: 1em;
+    transition: color 0.3s;
 }
 
-.card-link:hover {
-    text-decoration: underline;
+.card-link:hover,
+.card-link:focus {
+    color: #0056b3;
+    outline: 2px solid #007bff;
 }
 
 .itinerary-grid {
@@ -258,7 +331,7 @@ header nav a:hover {
 }
 
 .day-header {
-    background: #ff8c00;
+    background: var(--fall-orange);
     padding: 10px;
     text-align: center;
     border-radius: 5px 5px 0 0;
@@ -289,10 +362,13 @@ header nav a:hover {
 .restaurant-card a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.restaurant-card a:hover {
-    text-decoration: underline;
+.restaurant-card a:hover,
+.restaurant-card a:focus {
+    color: #0056b3;
+    outline: 2px solid #007bff;
 }
 
 .accommodation-section {
@@ -319,13 +395,7 @@ header nav a:hover {
     display: block;
 }
 
-.accommodation-info {
-    padding: 15px;
-    flex: 1;
-}
-
-/* Rest of your CSS remains unchanged... */
-
+/* Metro Link Section */
 .metro-link-section {
     text-align: center;
     margin: 20px 0;
@@ -337,10 +407,13 @@ header nav a:hover {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.metro-nav-link:hover {
+.metro-nav-link:hover,
+.metro-nav-link:focus {
     background: #0056b3;
+    outline: 2px solid #fff;
 }
 
 /* Weather Section */
@@ -383,10 +456,13 @@ header nav a:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.weather-btn:hover {
+.weather-btn:hover,
+.weather-btn:focus {
     background: #0056b3;
+    outline: 2px solid #fff;
 }
 
 .weather-resources {
@@ -424,10 +500,13 @@ header nav a:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.resource-btn:hover {
+.resource-btn:hover,
+.resource-btn:focus {
     background: #218838;
+    outline: 2px solid #fff;
 }
 
 /* Photo Challenge */
@@ -510,10 +589,13 @@ header nav a:hover {
     margin: 5px 0;
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-.metro-link:hover {
-    text-decoration: underline;
+.metro-link:hover,
+.metro-link:focus {
+    color: #0056b3;
+    outline: 2px solid #007bff;
 }
 
 .metro-tips {
@@ -565,30 +647,45 @@ footer {
 }
 
 /* Responsive Design */
-/* Responsive Design */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        font-size: 2em;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        margin-top: 10px;
+    }
+
     header nav {
         display: none; /* Hide nav by default on mobile */
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background: #a52a2a; /* Matches header background for cohesion */
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        background: rgba(165, 42, 42, 0.9); /* Semi-transparent for better visibility */
+        box-shadow: 0 4px 6px var(--shadow-soft);
         padding: 10px 0;
+        z-index: 10;
     }
+
     header nav.active {
         display: flex; /* Show nav when active */
-        flex-direction: column;
     }
-    .menu-toggle {
-        display: block; /* Show toggle button */
-        font-size: 1.5em;
-        cursor: pointer;
+
+    header nav a {
+        margin: 10px 0;
         padding: 10px;
-        color: #fff;
-        text-align: right;
+        font-size: 1.4em; /* Larger for touch */
     }
+
+    /* Disable heavy animation on mobile for performance */
+    body::before {
+        animation: none;
+        background: none;
+    }
+
     /* Adjust other existing mobile styles */
     .hero {
         padding: 20px 10px;
@@ -618,4 +715,13 @@ footer {
     .hero-img {
         max-width: 80%;
     }
+
+    .interactive-map iframe {
+        height: 300px; /* Smaller on mobile */
+    }
 }
+
+/* Add this JS to your HTML script tag for mobile menu toggle:
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('header nav').classList.toggle('active');
+});
