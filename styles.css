@@ -38,6 +38,7 @@ body::before {
     background-size: 50px; /* Smaller leaves for less rendering load */
     will-change: transform; /* Optimize animation */
     animation: fallLeaves 15s linear infinite; /* Slowed for smoothness */
+    opacity: 0.7; /* Lowered to prevent any overlay issues */
 }
 
 @keyframes fallLeaves {
@@ -45,11 +46,9 @@ body::before {
     100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* Section Transitions */
+/* Section Transitions - Disabled initial hide for reliability; can re-enable if JS is confirmed working */
 section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Slightly smoother */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Keep transition for potential future use */
 }
 section.in-view {
     opacity: 1;
@@ -720,8 +719,3 @@ footer {
         height: 300px; /* Smaller on mobile */
     }
 }
-
-/* Add this JS to your HTML script tag for mobile menu toggle:
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('header nav').classList.toggle('active');
-});
